@@ -1,13 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="yes"
-  >
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      user-scalable="yes"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="stylesheet.css" />
+
+    <title>Learning Bootstrap</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="content" id="mission">
+        <h1 class="display-4 bg-light">Learning Bootstrap</h1>
+        <h2>Few things worth mentioning about bootsrap</h2>
+        <ul>
+          <li>
+            It uses REBOOT.CSS styles, its job is to normalize styles so that
+            they look similar across devices and browsers
+          </li>
+          <li>It uses REMS, 1REM = 16px</li>
+          <li>
+            The default margin-top is set to 0, bootstrap only adds margin at
+            the bottom of the elements
+          </li>
+          <li>It uses inherit property whenever possible</li>
+          <li>It uses border-box instead of content-box</li>
+          <li>
+            It uses native font stacks, so it tries to use whatever the current
+            platoform defines as the default SANS-SERIF
+          </li>
+        </ul>
+      </section>
+      <hr />
+
+      <section class="content" id="display">
+        <p class="h3">
+          In Bootsrap if you give an element class like h3, its style will look
+          like tag h3
+        </p>
+        <p>
+          If you want to use something dramatic, class = display-1 to display-4,
+          is a way to go.
+        </p>
+        <p class="lead">
+          class = "lead" on the other hand will make the text lighter and spaced
+        </p>
+        <h1>This is a bootsrap H1</h1>
+        <h2>This is bootsrap's H2</h2>
+        <h3>This is bootsrap's H3</h3>
+        <h4>This is bootsrap's H4</h4>
+        <p>This is a simple paragraph</p>
+      </section>
+
+      <hr />
+      <h2 class="display-4 bg-light">Bootsrap typographic utilities</h2>
+      <hr />
+      <p>So bootstrap uses everything as css does eg</p>
+      <ul>
+        <li class="text-justify">
+          <strong>text-justify</strong>, which lets the text of a paragraph or
+          any other element, fit to the left and the right with the same amound
+          of spacing.
+        </li>
+        <li class="text-nowrap">
+          <strong>text-nowrap</strong>, allows us to run text infinetely to one
+          side withou actually cutting it off at the edge, especially when you
+          want to take one line and NEVER WRAP.
+        </li>
+        <li class="text-lg-left">
+          <strong>text(-XX)-POS</strong>,which lets you specify either a text
+          and then dash and then either text-left, or text-center or text-right.
+          Or you can specify a position, and then a media query breakpoint (XX),
+          which will go into this XX. eg. <em> text-sm-center</em>
+          <ul>
+            <li>
+              <strong>XX:sm > 576px</strong> | <strong>XX:md > 768px</strong> |
+              <strong>XX:lg > 992px</strong> | <strong>XX:xl > 1200px</strong>
+            </li>
+            <li>
+              <strong>POS:LEFT</strong> | <strong>POS:CENTER</strong> |
+              <strong>POS:RIGHT</strong> |
+            </li>
+          </ul>
+        </li>
+        <li class="text-uppercase">
+          <strong>Capitalization</strong>, self explanatory, change sth from
+          <strong
+            >text-lower-case to text-uppercase and
+            <em>text-capitilize</em></strong
+          >
+          which lets you capitalize first letter of each word.
+        </li>
+
+        <li class="font-weight-bold">
+          <strong>Text-Styles</strong>, eg. <em>font-weight-bold</em>,
+          <em>font-weight-normal</em> and <em>font-italic</em>
+        </li>
+      </ul>
+
+      <hr />
+      <h2 class="display-4 bg-light">Blockquotes & Lists</h2>
+      <hr />
+      <p>If you do not want any bullets, use <b>list-unstyled</b></p>
+      <ul class="list-unstyled">
+        <li>
+          This normally would be bulleted! since it's a li item, but it's not
+          because of bootsrap list-unstyled it also realigns elements to the
+          left
+        </li>
+      </ul>
+      <p>
+        There is another style that allows you to create inline lists. So this
+        is really useful if you want to put list items <b>in the same line</b>,
+        the way you do that is by applying a <b>list-inline</b> class on the UL
+        and then you apply a <b>list-inline-item</b> on each list item.
+      </p>
+
+      <ul class="list-inline">
+        <li class="list-inline-item">SAME LINE</li>
+        <li class="list-inline-item">OTHER LIST BUT ON THE SAME LINE</li>
+      </ul>
+
+      <br />
+      <p>OK! now let's have a look into <b>blockquote</b> style</p>
+
+      <blockquote>
+        This is a standard blockquote. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Nisi voluptatum quod tenetur id aut aspernatur
+        consectetur hic sint officia exercitationem et quis, mollitia dolorum
+        dolor magni doloremque, explicabo quibusdam sunt!
+      </blockquote>
+
+      <blockquote class="blockquote">
+        And this is a BOOTSTRAP blockquote. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Nisi voluptatum quod tenetur id aut
+        aspernatur consectetur hic sint officia exercitationem et quis, mollitia
+        dolorum dolor magni doloremque, explicabo quibusdam sunt!
+        <div class="blockquote-footer">
+          Jane (this was made using blockquote-footer class)
+        </div>
+      </blockquote>
+
+      <hr />
+      <h2 class="display-4 bg-light">Bootstrap Colours</h2>
+      <hr />
+
+      <p>
+        The way colours work is pretty simple, you just type <b>text-COLOR</b>,
+        where COLOR is a specific color, so here are some colors:
+      </p>
+      <ul>
+        <li class="text-primary">text-primary</li>
+        <li class="text-secondary">text-secondary</li>
+        <li class="text-success">text-success</li>
+        <li class="text-danger">text-danger</li>
+        <li class="text-warning">text-warning</li>
+        <li class="text-info">text-info</li>
+        <li class="text-light">text-light</li>
+        <li class="text-dark">text-dark</li>
+      </ul>
+
+      <p>
+        in addition to text colour, we can use BG colors as well, that would be
+        <b>bg-COLOR</b> :)
+      </p>
+      <ul>
+        <li class="bg-primary">text-primary</li>
+        <li class="bg-secondary">bg-secondary</li>
+        <li class="bg-success">bg-success</li>
+        <li class="bg-danger">bg-danger</li>
+        <li class="bg-warning">bg-warning</li>
+        <li class="bg-info">bg-info</li>
+        <li class="bg-light">bg-light</li>
+        <li class="bg-dark">bg-dark</li>
+        <li class="bg-white">bg-white</li>
+      </ul>
+
+      <hr />
+      <h2 class="display-4 bg-light">Bootstrap Images</h2>
+      <hr />
+      <p>
+        In Bootstrap, we have <b>img-fluid</b> class, so that will make the
+        image responsive to viewport, as the img below:
+      </p>
+
+      <img
+        src="https://source.unsplash.com/random"
+        alt="Picture from unsplash"
+        class="img-fluid"
+      />
+
+      <p class="mt-3">
+        What else can bootstrap do for us? well it can round the edges of the
+        picture, with class: <b>rounded</b>, <b>rounded-top</b>,
+        <b>rounded-bottom</b>, <b>rounded-left</b>, <block>rounded-circle, </b
+        ><b>rounded-0</b>, and <b>img-thumbnail</b>, that will automatically
+        have rounded corners with 1px boreder
+      </p>
+
+      <img
+        src="https://source.unsplash.com/random"
+        alt="Picture from unsplash"
+        class="rounded-circle img-fluid"
+      />
+
+      <p class="mt-3">
+        What else can be done to images? well, alignment classess are pretty
+        useful, that is: <b>float-left</b>, and <b>float-right</b>, also if you
+        decide that image has to be a block element just use the class
+        <b>mx-auto</b>
+      </p>
+      <hr />
+
+      <p>
+        We can't forget about <b>figure</b>, <b>figure-img</b>, and
+        <b>figure-caption</b> class
+      </p>
+      <figure class="figure">
+        <img
+          class="figure-img img-fluid"
+          src="https://source.unsplash.com/daily"
+          alt="Unsplash daily"
+        />
+        <figcaption class="figure-caption">The HTML Reference logo</figcaption>
+      </figure>
+
+      <hr />
+      <h2 class="display-4 bg-light">CSS VARIABLES</h2>
+      <hr />
+      <p>
+        In Bootstrap, we can use CSS VARIABLES <b>var() and :root</b> class,
+        pre-written variables that can be used in developing your projects and
+        customizing your colours. So first use the VAR function, followed by the
+        name of variables. all variables start with the name that begins with
+        two dashes.
+      </p>
+      <ul class="font-weight-bold list-unstyled bg-warning">
+        Color / Contextual Variables
+        <li class="font-weight-normal list-unstyled bg-white">
+          --blue, --indigo, --purple, --pink, --red, --orange, --yellow,
+          --green, --teal, --cyan, --white, --gray, --gray-dark, --light,
+          --dark, --primary, --secondary, --success, --info, --warning,
+          --danger.
+        </li>
+      </ul>
+
+      <ul class="font-weight-bold list-unstyled bg-warning">
+        Media Queries
+        <li class="font-weight-normal list-unstyled bg-white">
+          --breakpoing-xs, --breakpoing-sm, --breakpoint-md, --breakpoing-lg,
+          --breakpoint-xl
+        </li>
+      </ul>
+
+      <ul class="font-weight-bold list-unstyled bg-warning">
+        Fonts
+        <li class="font-weight-normal list-unstyled bg-white">
+          --font-family-sans-serif, --font-family-monospace
+        </li>
+      </ul>
+      <hr />
+      <h2 class="text-danger">Let's check live example of bootstrap variables</h2>
+      <p class="bg-danger text-white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum
+        asperiores, aperiam nam doloribus, voluptates, ullam cum incidunt
+        impedit quibusdam quidem libero facere? Sunt velit consequatur, quaerat
+        odio mollitia quam.
+      </p>
+
+      <section class="content" id="blockquotes">
+      <h2 style="color: var(--teal);">And another one here</h2>
+      <blockquote>
+        This blockquote class is teal! because I used class <b>color: var(--teal);</b>.
+      </blockquote>
+    </section>
+    </div>
+    <!-- End of Bootstrap container -->
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
