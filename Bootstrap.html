@@ -16,13 +16,18 @@
       crossorigin="anonymous"
     />
 
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="stylesheet.css" />
 
     <title>Learning Bootstrap</title>
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" role="grid">
       <section class="content" id="mission">
         <h1 class="display-4 bg-light">Learning Bootstrap</h1>
         <h2>Few things worth mentioning about bootsrap</h2>
@@ -87,8 +92,10 @@
           which will go into this XX. eg. <em> text-sm-center</em>
           <ul>
             <li>
-              <strong>XX:sm > 576px</strong> | <strong>XX:md > 768px</strong> |
-              <strong>XX:lg > 992px</strong> | <strong>XX:xl > 1200px</strong>
+              <strong>XX:sm &lt; 576px</strong> |
+              <strong>XX:md &lt; 768px</strong> |
+              <strong>XX:lg &lt; 992px</strong> |
+              <strong>XX:xl &lt; 1200px</strong>
             </li>
             <li>
               <strong>POS:LEFT</strong> | <strong>POS:CENTER</strong> |
@@ -149,7 +156,7 @@
         consectetur adipisicing elit. Nisi voluptatum quod tenetur id aut
         aspernatur consectetur hic sint officia exercitationem et quis, mollitia
         dolorum dolor magni doloremque, explicabo quibusdam sunt!
-        <div class="blockquote-footer">
+        <div class="blockquote-footer" role="text">
           Jane (this was made using blockquote-footer class)
         </div>
       </blockquote>
@@ -200,13 +207,13 @@
       <img
         src="https://source.unsplash.com/random"
         alt="Picture from unsplash"
-        class="img-fluid"
+        class="img-fluid mx-auto d-block"
       />
 
       <p class="mt-3">
         What else can bootstrap do for us? well it can round the edges of the
         picture, with class: <b>rounded</b>, <b>rounded-top</b>,
-        <b>rounded-bottom</b>, <b>rounded-left</b>, <block>rounded-circle, </b
+        <b>rounded-bottom</b>, <b>rounded-left</b>, <b>rounded-circle, </b
         ><b>rounded-0</b>, and <b>img-thumbnail</b>, that will automatically
         have rounded corners with 1px boreder
       </p>
@@ -214,7 +221,7 @@
       <img
         src="https://source.unsplash.com/random"
         alt="Picture from unsplash"
-        class="rounded-circle img-fluid"
+        class="rounded-circle img-fluid mx-auto d-block"
       />
 
       <p class="mt-3">
@@ -273,7 +280,9 @@
         </li>
       </ul>
       <hr />
-      <h2 class="text-danger">Let's check live example of bootstrap variables</h2>
+      <h2 class="text-danger">
+        Let's check live example of bootstrap variables
+      </h2>
       <p class="bg-danger text-white">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus rerum
         asperiores, aperiam nam doloribus, voluptates, ullam cum incidunt
@@ -282,19 +291,256 @@
       </p>
 
       <section class="content" id="blockquotes">
-      <h2 style="color: var(--teal);">And another one here</h2>
-      <blockquote>
-        This blockquote class is teal! because I used class <b>color: var(--teal);</b>.
-      </blockquote>
-    </section>
-    </div>
-    <!-- End of Bootstrap container -->
+        <h2 style="color: var(--teal);">And another one here</h2>
+        <blockquote>
+          This blockquote class is teal! because I used class
+          <b>color: var(--teal);</b>.
+        </blockquote>
+        <p>
+          Actually, I lied, it's not
+          <b class="bg-info text-white"
+            >teal, because I changed the variable of --teal in CSS file to
+            colour #37e631</b
+          >
+        </p>
+        <p>
+          in my CSS file I just typed <b>:root { --teal: #37e631;</b> aaand
+          voila!
+        </p>
+      </section>
 
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+      <section>
+        <hr />
+        <h2 class="display-4 bg-light">Mastering Bootstrap Layout</h2>
+        <hr />
+        <p>
+          As you may (or may not) know, the most useful part of Bootstrap is the
+          grid, so this is the frist thing you should master!
+        </p>
+        <p>
+          Bootstrap layouts have 3 main pieces. The first is <b>containers</b>,
+          which take up 100% of the width of the view port. Inside containers,
+          you can also place content in rows & columns. Bootsrap uses
+          <b>12 column grid system</b>, that has breakpoints for:
+          <i class="bg-success text-white"
+            >extra-small, small, medium, large and x-large devices.</i
+          >
+        </p>
+      </section>
+
+      <section>
+        <hr />
+        <h2 class="display-4 bg-light">Containers & Rows</h2>
+        <hr />
+        <h2>The Grid fun facts</h2>
+        <ul>
+          <li>It's a responsive 12-column system</li>
+          <li>It uses flexbox, for the easier creation of complex layouts</li>
+          <li>
+            So make sure you master 3 simple components:
+            <b> Containers,</b> used with or without the grid to align content
+            to the viewport, or center it around a set of breakpoints.
+            <b> Rows & Columns</b> to allow for the layout creation.
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <h2>Grid Containers</h2>
+      <p>
+        There are 2 different types of containers. <b>regular ones</b>, which
+        center content and snap to certain grid points, or <b>fluid ones</b>,
+        which are always the full width of the viewport. One of the reason you
+        use a container is because you get a 15px padding on each side to make
+        sure it works well with backgrounds and other elements.
+      </p>
+      <p>So, here are the breakpoints that regular container will adjust to:</p>
+      <p class="bg-success text-white rounded d-inline p-2 text-center">
+        &lt; 576px
+      </p>
+      <p class="bg-success text-white rounded d-inline p-2 text-center">
+        576px
+      </p>
+      <p class="bg-success text-white rounded d-inline p-2 text-center">
+        768px
+      </p>
+      <p class="bg-success text-white rounded d-inline p-2 text-center">
+        992px
+      </p>
+      <p class="bg-success text-white rounded d-inline p-2 text-center">
+        1200px
+      </p>
+      <hr />
+
+      <p>and here please find some random example of a picture.</p>
+      <header class="clearfix" style="height: 50vh; background: url(https://source.unsplash.com/random) no-repeat center center; background-size: cover; margin-bottom: 20px;">
+        <img
+          src="letterpress.svg"
+          alt="random-logo"
+          class="loguszek container"
+        />
+      </header>
+      <!-- Clearfix - stops the floating , height 50/100th of the vieport height, background centered/ not repeated, cover will scale it to fit the contener size. / marging 20px -->
+    
+
+    <section class="container text-center" id="services">
+      <hr />
+      <h2 class="display-4 bg-light">Rows & Columns / col-BP-COL </h2>
+      <hr />
+
+      <section class="text-left">
+        <h2>Column fun facts</h2>
+        <ul>
+          <li>
+            It uses 12 column grid, and how content fits into columns is up to
+            you, and you can specify when the layout transform into full
+            horizontal one.
+          </li>
+          <li>Columns can span, just type in <b>col(-BP) (-COL)</b></li>
+          <ul class="my-3">
+            <p>BP:</p>
+            <li
+              class="bg-success text-white rounded d-inline p-2 my-2 text-center"
+            >
+              sm &lt; 576px
+            </li>
+            <li
+              class="bg-success text-white rounded d-inline p-2 my-2 text-center"
+            >
+              md &lt; 768px
+            </li>
+            <li
+              class="bg-success text-white rounded d-inline p-2 my-2 text-center"
+            >
+              lg &lt; 992px
+            </li>
+            <li
+              class="bg-success text-white rounded d-inline p-2 my-2 text-center"
+            >
+              xl &lt; 1200px
+            </li>
+            <p class="mt-4">COL:</p>
+            <li
+              class="bg-warning text-white rounded d-block p-2 my-2 text-center guzik"
+            >
+              1 – 12
+            </li>
+          </ul>
+          <li>
+            If you just specify class <b>col</b>, Bootstrap will try to fit that
+            column into the layout, so if you have more than one column, it will
+            automatically size it, to fit into that space, so if we have 2
+            columns, bootstrap will make them 50% size, 3 columns will take 33#
+            of the contener size itd.
+          </li>
+          <li>if we type<b> col-sm</b> the column will take normal width of the browser, untill it reaches that sm point of 576px or higher, if we type <b>col-md</b> that column will continue to take the full width of the space in the viewport/browser untill the medium breakpoint of 768px.   </li> 
+          <li>The last col porperty is the number of columns it should display in the breakpoint <b> col-md-6</b></li>
+          
+        </ul>
+
+        <p>
+          <b>section class = "container"</b> will make the content snap inside
+          the box, which I just did.
+        </p>
+        <p>
+          And then there's <b>a row</b> which should be inside of the
+          <b>container</b>, wrapped with stuff we eventually want the rows to
+          be, in this example, I just wrapped all the text with article tags
+        </p>
+      </section>
+
+      <div class="row">
+        <article class="col-xl-4 col-md-6 col-sm-6">
+          <i class="material-icons">sentiment_satisfied_alt</i>
+          <h3>Being Happy</h3>
+          <p>
+            Is very important, and I'll help you find out, how to do it. Just
+            few 1-hour sessions with me will help you discover your true
+            potential.
+          </p>
+        </article>
+
+        <article class="col-xl-4 col-md-6 col-sm-6">
+          <i class="material-icons">favorite</i>
+          <h3>Being Loved</h3>
+          <p>
+            Many people wonder what's the key to&nbsp;happiness. Love is the answer,
+            if there's no&nbsp;one in your life, that you feel, loves you
+            unconditionally. get a dog.
+          </p>
+        </article>
+
+        <article class="col-xl-4 col-md-6 col-sm-6">
+          <i class="material-icons">accessibility_new</i>
+          <h3>General Health</h3>
+          <p>
+            Another thing is your health. Both mental and physical. You can't
+            unlock your true potential if any of those are being damaged.
+          </p>
+        </article>
+
+        <article class="col-xl-4 col-md-6 col-sm-6">
+          <i class="material-icons">face</i>
+          <h3>Friends</h3>
+          <p>
+            We need people around us. We need friends. Ever wondered why the popular tv show from the 90s was so popular? It's because people long to have that kind of relationship with other people.
+          </p>
+        </article>
+
+        <article class="col-xl-4 col-md-6 col-sm-6 ">
+          <i class="material-icons">local_florist</i>
+          <h3>Plants</h3>
+          <p>
+            Ever came in a house with no plants? It's depressing. We need them around us, for the good energy, they sooth our mind, they purify the air. Water them and they will love you.
+          </p>
+        </article>
+
+        <article class="col-xl-4 col-md-6 col-sm-6">
+          <i class="material-icons">cake</i>
+          <h3>Great Food</h3>
+          <p>
+            We are what we eat, so make sure you eat plenty of gooood stuff. Avoid processed food, if you can grow your own food. Do it! Ever tried home made blueberry pie from your own garden?
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+        <hr />
+        <h2 class="display-4 bg-light text-center">OFFSET columns / offset-bp-col</h2>
+        <hr />
+        <p>
+          As you may (or may not) know, the most useful part of Bootstrap is the
+          grid, so this is the frist thing you should master!
+        </p>
+        <p>
+          Bootstrap layouts have 3 main pieces. The first is <b>containers</b>,
+          which take up 100% of the width of the view port. Inside containers,
+          you can also place content in rows & columns. Bootsrap uses
+          <b>12 column grid system</b>, that has breakpoints for:
+          <i class="bg-success text-white"
+            >extra-small, small, medium, large and x-large devices.</i
+          >
+        </p>
+      </section>
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <!-- End of Bootstrap container -->
+    <script>
+      src =
+        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js";
+      integrity =
+        "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM";
+      crossorigin = "anonymous";
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

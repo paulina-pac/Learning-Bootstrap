@@ -1,7 +1,23 @@
-img {
-  max-width: 800px;
-}
-
 :root {
   --teal: #37e631;
+  --kisskiss: #eeeeee;
+  --foo: 2px 2px 15px 0 #ddd;
+}
+
+img.img-fluid {
+  max-width: 400px;
+  box-shadow: var(--foo);
+}
+
+.loguszek {
+  width: 100px;
+}
+
+.material-icons {
+  font-size: 200px;
+  color: cornflowerblue;
+}
+
+.guzik {
+  width:60px;
 }
