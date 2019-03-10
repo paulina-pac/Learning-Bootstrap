@@ -21,3 +21,22 @@ img.img-fluid {
 .guzik {
   width:60px;
 }
+
+.grid-png {
+  background-image: url(xl.png);
+  background-repeat: no-repeat ;
+  background-position: center center; 
+  background-size: cover; 
+}
+
+.grid-png-container {
+  width: 100%;
+  margin-bottom: 20px;
+  
+}
+
+.doop {
+  width: 100%;
+      height: 200px;
+      max-height: 200px;
+}
