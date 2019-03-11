@@ -40,3 +40,29 @@ img.img-fluid {
       height: 200px;
       max-height: 200px;
 }
+
+.pip {
+  background: #63ff9f;
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  border: 1px solid white;
+}
+
+.pipka {
+ background: #aaaaaa;
+ text-align: center;
+ border: 1px solid white;
+padding: 0 2px;
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  background: steelblue;
+}

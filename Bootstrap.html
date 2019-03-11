@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
@@ -345,7 +345,7 @@
 
     <p>and here please find some random example of a picture.</p>
     <header class="clearfix"
-      style="height: 50vh; background: url(https://source.unsplash.com/random) no-repeat center center; background-size: cover; margin-bottom: 20px;">
+            style="height: 50vh; background: url(https://source.unsplash.com/random) no-repeat center center; background-size: cover; margin-bottom: 20px;">
       <img src="letterpress.svg" alt="random-logo" class="loguszek container" />
     </header>
     <!-- Clearfix - stops the floating , height 50/100th of the vieport height, background centered/ not repeated, cover will scale it to fit the contener size. / marging 20px -->
@@ -614,7 +614,8 @@
         Let's get a closer look now on how we can customize the order of the
         elements, and by that I mean, the way the columns appear with
         different screen widths.
-        So in the example below, I just made few sections, If I give the first class <b> section class = col order-3</b>, what it did, moved number 1 into 3rd position. I can also give each specific class order and it will show it in that order.
+        So in the example below, I just made few sections, If I give the first class <b> section class = col order-3</b>, what it did, moved number 1 into 3rd position. I can
+        also give each specific class order and it will show it in that order.
       </p>
       <hr />
       <div class="row" role="grid">
@@ -658,160 +659,432 @@
       </h2>
       <hr />
       <p>
-        There are many new classes to handle how elements align into one another, as well as their containers. 
+        There are many new classes to handle how elements align into one another, as well as their containers.
         So first of all we have vertical alignment, to align columns in the grid, there's few classes that we can add to the rows.
-        <b> align-items-ALN</b> 
+        <b> align-items-ALN</b>
         <ul class="my-3">
           <p><b>ALN:</b></p>
           <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">start</li>
           <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">center</li>
           <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">end</li>
-      </ul>
-        </p>
+        </ul>
+      </p>
       <hr />
       <p>
-        Next to discuss will be <b>individual alignment of the columns</b> where we put the keyword within the columns themselves, not in the row like with the previous vertical alignemnt classes.
-         <b> align-self-ALN</b> 
+        Next to discuss will be <b>individual alignment of the columns</b> where we put the keyword within the columns themselves, not in the row like with the previous
+        vertical alignemnt classes.
+        <b> align-self-ALN</b>
         <ul class="my-3">
           <p><b>ALN:</b></p>
           <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">start (top)</li>
           <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">center</li>
           <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">end</li>
-      </ul>
-        </p>
-
-        <hr />
-        <p>
-          Let's not forget about <b>horizontal alignment</b> where we place these classes in the rows, but we need to make sure we are using a columnd width, specify how many units these columns will take up within the grid.
-          They can't just be used with col keyword, because that would take up the whole width of the row, depending on how many columns we have.
-          <b> justify-content-ALN</b> 
-          <ul class="my-3">
-            <p><b>ALN:</b></p>
-            <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">start</li>
-            <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">center</li>
-            <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">end</li>
-            <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">around</li>
-            <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">between</li>
         </ul>
-          </p>
-          <hr>
+      </p>
 
-
-          <!-- ROW 1 -->
-  <p class="d-block"> So in this example there's 3 columns, each has <b>align-self</b> class, but the first is start 
-    / second center and 3rd is end which can be seen below, am I right? We can also <b>align-items-start-center-end</b> but in the div "row" they will align according to that container</p>
-  <div class="row bg-light" style="height: 60vh;">
-    <section class="col">
-      <img src="https://source.unsplash.com/user/erondu" alt="sample image" class="doop">
-      <h4>Exotic Pets</h4>
-      <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
-    </section>
-    <section class="col align-self-center">
-      <img src="https://source.unsplash.com/user/jeremybishop" alt="sample image" class="doop">
-      <h4>Grooming</h4>
-      <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
-    </section>
-    <section class="col align-self-end">
-      <img src="https://source.unsplash.com/user/davidhofmann" alt="sample image" class="doop">
-      <h4>General Health</h4>
-      <p>Wellness and senior exams, ultrasound, x-ray, and dental cleanings.</p>
-    </section>
-  </div><!--/ row 1 -->
-
-
-
-<!-- ROW 2 -->
-  <div class="row bg-warning justify-content-center" style="height: 30vh;">
-    <section class="col-4">
-      <img src="https://source.unsplash.com/user/kevin_lee" alt="sample image" class="doop">
-      <h4>Exotic Pets</h4>
-      <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
-    </section>
-    <section class="col-4">
-      <img src="https://source.unsplash.com/user/leoncooper" alt="sample image" class="doop">
-      <h4>Grooming</h4>
-      <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
-    </section>
-    
-  </div><!-- / row 2 -->
-
-
-</section>
-
-<hr />
-<h2 class="display-4 bg-light text-center">
-  Bootstrap Display Properties
-</h2>
-<hr />
-<div class="row text-center" role="row">
-  <section class="col-6">
+      <hr />
       <p>
-          There are other ways beside the grid to control how elements are positioned within Bootstrap, 
-          so let's take a look at what they are and how to use them. Now, first of all is position. 
-          These work exactly like the regular CSS position property. There are three options you can use. 
-          You can make an element <b>fixed</b> to the top of the screen, which means it would get removed from the flow 
-          of the document and put essentially at the top of the window or at the top of the view port, <b>fixed-bottom</b> would
-          place the element at the bottom. There's another one called <b>sticky-top</b>, and that one will allow you to have an 
-          element stick to the top of the view port or the screen as you scroll in elements. 
-          There's also display properties. </p>
+        Let's not forget about <b>horizontal alignment</b> where we place these classes in the rows, but we need to make sure we are using a columnd width, specify how many
+        units these columns will take up within the grid.
+        They can't just be used with col keyword, because that would take up the whole width of the row, depending on how many columns we have.
+        <b> justify-content-ALN</b>
+        <ul class="my-3">
+          <p><b>ALN:</b></p>
+          <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">start</li>
+          <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">center</li>
+          <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">end</li>
+          <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">around</li>
+          <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">between</li>
+        </ul>
+      </p>
+      <hr>
+
+
+      <!-- ROW 1 -->
+      <p class="d-block"> So in this example there's 3 columns, each has <b>align-self</b> class, but the first is start
+        / second center and 3rd is end which can be seen below, am I right? We can also <b>align-items-start-center-end</b> but in the div "row" they will align according to
+        that container</p>
+      <div class="row bg-light" style="min-height: 60vh;">
+        <section class="col">
+          <img src="https://source.unsplash.com/user/erondu" alt="sample image" class="doop">
+          <h4>Exotic Pets</h4>
+          <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
         </section>
-        
-        <section class="col-6">
+        <section class="col align-self-center">
+          <img src="https://source.unsplash.com/user/jeremybishop" alt="sample image" class="doop">
+          <h4>Grooming</h4>
+          <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
+        </section>
+        <section class="col align-self-end">
+          <img src="https://source.unsplash.com/user/davidhofmann" alt="sample image" class="doop">
+          <h4>General Health</h4>
+          <p>Wellness and senior exams, ultrasound, x-ray, and dental cleanings.</p>
+        </section>
+      </div>
+      <!--/ row 1 -->
+
+
+
+      <!-- ROW 2 -->
+      <div class="row bg-warning justify-content-center" style="min-height: 30vh;">
+        <section class="col-4">
+          <img src="https://source.unsplash.com/user/kevin_lee" alt="sample image" class="doop">
+          <h4>Exotic Pets</h4>
+          <p>We offer specialized care for reptiles, rodents, birds, and other exotic pets.</p>
+        </section>
+        <section class="col-4">
+          <img src="https://source.unsplash.com/user/leoncooper" alt="sample image" class="doop">
+          <h4>Grooming</h4>
+          <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
+        </section>
+
+      </div><!-- / row 2 -->
+
+
+    </section>
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+      Bootstrap Display Properties
+    </h2>
+    <hr />
+
+    <div class="row text-center" role="row">
+      <section class="col-6">
         <p>
-          The <b>display properties</b> mimic what is possible with CSS and opens up 
+          There are other ways beside the grid to control how elements are positioned within Bootstrap,
+          so let's take a look at what they are and how to use them. Now, first of all is position.
+          These work exactly like the regular CSS position property. There are three options you can use.
+          You can make an element <b>fixed</b> to the top of the screen, which means it would get removed from the flow
+          of the document and put essentially at the top of the window or at the top of the view port, <b>fixed-bottom</b> would
+          place the element at the bottom. There's another one called <b>sticky-top</b>, and that one will allow you to have an
+          element stick to the top of the view port or the screen as you scroll in elements.
+          There's also display properties. </p>
+      </section>
+
+      <section class="col-6">
+        <p>
+          The <b>display properties</b> mimic what is possible with CSS and opens up
           Bootstrap to Flexbox classes that can help with layout. So use a display class, you use the <b>d</b> and then optionally
-          a breakpoint, and then the type of display property that you want. And you can see that we have the full range of 
-          display properties that you have normally available in CSS also in Bootstrap. So you can say d and the none or 
-          display none at a specific breakpoint. So you would say like, d, then -md, and then -none. That would display 
-          nothing at the medium breakpoint. So these are actually quite powerful. Bootstrap gives you a great way to control 
-          how your display properties are working at different breakpoints. Now, Flex has a ton of options. We'll cover the 
+          a breakpoint, and then the type of display property that you want. And you can see that we have the full range of
+          display properties that you have normally available in CSS also in Bootstrap. So you can say d and the none or
+          display none at a specific breakpoint. So you would say like, d, then -md, and then -none. That would display
+          nothing at the medium breakpoint. So these are actually quite powerful. Bootstrap gives you a great way to control
+          how your display properties are working at different breakpoints. Now, Flex has a ton of options. We'll cover the
           basic container in this video and explore it further in the next.
         </p>
       </section>
 
     </div>
+    <p>
+      <b>Position classes:</b>
+      <ul class="my-3">
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">fixed-top</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">fixed-bottom</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">sticky-top</li>
+      </ul>
+    </p>
+
+    <p>
+      <b>Display properties (d-sm-inline):</b>
+      <ul class="my-3">
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">none</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">inline</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">inline-block</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">block</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-row</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-cell</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">flex</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">inline-flex</li>
+      </ul>
+    </p>
+
+    <p>
+      <b>Print Display classes (d-print-block):</b>
+      <ul class="my-3">
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">none</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">inline</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">inline-block</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">block</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-row</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-cell</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">flex</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">inline-flex</li>
+      </ul>
+    </p>
+
+    <p>
+      <b>Basic Flex Container: (d-xl-inline-flex)</b>
+      <ul class="my-3">
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">sm</li>
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">md</li>
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">lg</li>
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">xl</li>
+      </ul>
+    </p>
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+      Flexbox container options
+    </h2>
+    <hr />
+    <div class="row text-left" role="row">
+      <section class="col-6">
+        <ul>
+          <li> Shortest version of flex, would be <b>d-flex</b> (display flex) but you can put break point eg. d-sm-inline-flex or d-lg-flex</li>
+          <li> the other thing, is <b>direction clases: flex-lg-row(column)-reverse</b></li>
+          <li> he other thing, is controlling order of individual elements <b>order: order-Breakpoint-ORD(0-12)</b></li>
+          <li> the other thing, is <b>justifying: justify-content--breakpoint-alignment (start/end/center/around/between)</b></li>
+          <li> the other thing, is <b>wrap: flex-breakpoint-wrap(or -nowrap)-reverse(ornot) </b></li>
+
+
+        </ul>
+      </section>
+
+      <section class="col-6">
         <p>
-            <b>Position classes:</b> 
-            <ul class="my-3">
-              <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">fixed-top</li>
-              <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">fixed-bottom</li>
-              <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">sticky-top</li>
-          </ul>
-            </p>
-            
-            <p>
-                <b>Display properties (d-sm-inline):</b> 
-                <ul class="my-3">
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">none</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">inline</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">inline-block</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">block</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">table</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">table-row</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">table-cell</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">flex</li>
-                  <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">inline-flex</li>
-              </ul>
-                </p>
+          It's quite tricky so I guess you have to play around and see how each eleement behaves.
+        </p>
+        <ul>
+          <li> the other thing, is <b>vertical alignment: align-content-breakpoint-alignment(start/end/center/between/around/stretch) </b></li>
+          <li> the other thing, is <b>align self: align-self-breakpoint-alignment(start/end/center/baseline/stretch/) </b></li>
+          <li> Let's not forget Floating elements in bootstrap is still available: <b>float-breakpoint-side(left/right/none) </b></li>
 
-                <p>
-                    <b>Print Display classes (d-print-block):</b> 
-                    <ul class="my-3">
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">none</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">inline</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">inline-block</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">block</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">table</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">table-row</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">table-cell</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">flex</li>
-                      <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">inline-flex</li>
-                  </ul>
-                    </p>
+        </ul>
+      </section>
+    </div>
 
 
+    <div class="bg-info" style="height:50vh; width: 100%">
+      <div class="d-flex flex-wrap bg-warning justify-content-center">
+        <div class="pip">Exotic</div>
+        <div class="pip">Grooming</div>
+        <div class="pip">Health</div>
+        <div class="pip">Nutrition</div>
+        <div class="pip">Pests</div>
+        <div class="pip">Vaccinations</div>
+      </div>
+
+
+      <div class="bg-primary clearfix">
+
+        <div class="pipka float-left">Exotic</div>
+        <div class="pipka float-left">Grooming</div>
+        <div class="pipka float-left">Health</div>
+        <div class="pipka float-left">Nutrition</div>
+        <div class="pipka float-left">Pests</div>
+        <div class="pipka float-left">Vaccinations</div>
+      </div>
+    </div>
+
+
+
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+      Margin & Padding / PRO(SID)-(BP)-SIZ
+    </h2>
+    <hr />
+
+    <div class="row text-center" role="row">
+      <section>
+        <p>
+          Marging and padding mimics exactly margin and paddin classes in CSS</p>
+      </section>
+
+    </div>
+    <p>
+      <b>PRO (property):</b>
+      <ul class="my-3">
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">m (margin)</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">p (padding)</li>
+      </ul>
+    </p>
+
+    <p>
+      <b>SID (side, remember there's no – between property and side eg. mt - margintop):</b>
+      <ul class="my-3">
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">t (top)</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">b (bottom)</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">l (left)</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">r (right)</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">y (top&bottom)</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">x (left&right) </li>
+      </ul>
+    </p>
+
+    <p>
+      <b>BP (break point):</b>
+      <ul class="my-3">
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">sm</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">md</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">lg</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">xl</li>
+      </ul>
+    </p>
+
+    <p>
+      <b>SIZ (size, based on REM eg. 1 = 0.25rem 2 = 0.5rem 3 = 1rem 4 = 1.5rem and 5 = 3rems)</b>
+      <ul class="my-3">
+        <li class="bg-warning text-white rounded d-inline p-2 mx-2 my-2 text-center">0</li>
+        <li class="bg-warning text-white rounded d-inline p-2 mx-2 my-2 text-center">1</li>
+        <li class="bg-warning text-white rounded d-inline p-2 mx-2 my-2 text-center">2</li>
+        <li class="bg-warning text-white rounded d-inline p-2 mx-2 my-2 text-center">3</li>
+        <li class="bg-warning text-white rounded d-inline p-2 mx-2 my-2 text-center">4</li>
+        <li class="bg-warning text-white rounded d-inline p-2 mx-2 my-2 text-center">5</li>
+        <li class="bg-warning text-white rounded d-inline p-2 mx-2 my-2 text-center">auto</li>
+      </ul>
+    </p>
+    <hr>
+
+    <div class="bg-primary d-flex">
+
+      <div class="pipka bg-success mx-2 visible">margin left and right 2</div>
+      <div class="pipka my-2">margin top&bottom 2</div>
+      <div class="pipka p-1">padding 1</div>
+      <div class="pipka p-2">padding 2</div>
+      <div class="pipka pb-3">padding botom 3</div>
+      <div class="pipka py-5">padding top&bottom 5</div>
+    </div>
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+      Bootstrap visibility
+    </h2>
+    <hr />
+
+    <p> As you may or may not know, you can hide and show content on the page,
+      and it's easily done with bootstrap by using <b>visibility</b> class.</p>
+
+    <p>
+      <b>invisible, visible class:</b> It doesn't really change the display property itself.
+      Invisible will make an element not appear on screen, but it will take up the amount of room
+      that it would normally take up. Whereas visible means that it will be visible, but only to screen readers.
+      So it's a way to force an element to show up with somebody with assistive devices.
+      <ul class="my-3">
+        <li class="bg-info text-white rounded d-inline p-2 mx-2 my-2 text-center">invisible</li>
+        <li class="bg-info text-white rounded d-inline p-2 mx-2 my-2 text-center">visible</li>
+      </ul>
+      The other thing of course would be to simply display-property to none (<b>d-none</b>)
+      You can set display to none, but add class visible, it will be visible for assistive devices.
+      You can also hide elements in specific breakpoints that way. e.g <b> d-sm-none</b>
+      <ul class="my-3">
+        <li class="bg-info text-white rounded d-inline p-2 mx-2 my-2 text-center">d-none visible</li>
+      </ul>
+    </p>
+
+
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+      Sizing |SIZ(-AMT)
+    </h2>
+    <hr />
+
+    <p>Bootstrap gives you a few sizing utilities to control the width and height of different elements.</p>
+
+    <p>
+      <b>width & height / max-width & max-height/ SIZ</b> Correspond to CSS, in Bootstrap though, we specify an
+      amount of 25, 50, 75 or 100.
+      <ul class="my-3">
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">w (width)</li>
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">h (height)</li>
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">mw (max-width)</li>
+        <li class="bg-danger text-white rounded d-inline p-2 mx-2 my-2 text-center">mh (max-height)</li>
+      </ul>
+      and amount, eg. w-25 (width 25) <b> d-sm-none</b>
+      <ul class="my-3">
+        <li class="bg-success text-white rounded d-inline p-2 mx-2 my-2 text-center">25%</li>
+        <li class="bg-success text-white rounded d-inline p-2 mx-2 my-2 text-center">50%</li>
+        <li class="bg-success text-white rounded d-inline p-2 mx-2 my-2 text-center">75%</li>
+        <li class="bg-success text-white rounded d-inline p-2 mx-2 my-2 text-center">100%</li>
+      </ul>
+
+      see the examples below
+      <hr>
+    </p>
+
+    <div class="bg-primary" style="min-height:200px;">
+
+      <div class="pipka w-25 text-white">w-25</div>
+      <div class="pipka w-50 text-white">w-50</div>
+      <div class="pipka w-75 text-white">w-75</div>
+      <div class="pipka w-100 text-white">w-100</div>
+      <div class="pipka h-50 text-white">h-50</div>
+      <div class="pipka h-25 text-white">h-25</div>
+    </div>
+
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+      Borders | border-sid-color-0
+    </h2>
+    <hr />
+
+    <p>There a number of classes that you can use to control how Bootstrap displays borders.
+      In the regular border class, we specify the keyword <b>BORDER,</b> and then optionally, <b>a side. </b>
+      Now when you do that, you do have to include the original border class as well. You can also specify the contextual
+      <b>color class</b>, with something like primary, secondary, success or danger, et cetera.
+      <hr>
+    </p>
+
+    <p>
+      <b>Side </b>
+      <ul class="my-3">
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">top</li>
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">right</li>
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">bottom</li>
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">left</li>
+      </ul>
+      <b> color:</b>
+      <ul class="my-3">
+        <li class="bg-success text-white rounded d-inline p-2 mx-2 my-2 text-center">any color</li>
+      </ul>
+
+      <b> color:</b>
+      <ul class="my-3">
+        <li class="bg-success text-white rounded d-inline p-2 mx-2 my-2 text-center">any color</li>
+      </ul>
+
+      <hr>
+    </p>
+
+    <p>
+      If you want to, you can also <b>clear out an existing border with the keyword zero.</b> Now in addition to that, you can also control the
+      CSS <b>Border-radius property</b>. To do that, you use the keyword ROUNDED, and optionally then, one of the SIDs. If you want to make all
+      of the SIDs 50%, which makes the element into a circle, then you can use the keyword CIRCLE. And then finally, you have the option
+      of clearing an existing border with zero
+    </p>
+
+    <p>
+      <b>Border radius class = Rounded-side-circle-0 </b>
+      <ul class="my-3">
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">top</li>
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">right</li>
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">bottom</li>
+        <li class="bg-primary text-white rounded d-inline p-2 mx-2 my-2 text-center">left</li>
+      </ul>
+    </p>
+
+    <div class="bg-light d-flex">
+        <div class="item border text-white "><p>just a border</p></div>
+        <div class="item text-white border border-warning "><p>just a border with border-warning color (yellow)</p></div>
+        <div class="item text-white border-top border-danger">a border with border-danger color and border-top class</div>
+        <div class="item text-white border rounded">border with "rounded" class </div>
+        <div class="item text-white border rounded-circle">border with "rounded-circle" class </div>
+      </div>
 
   </div>
+
+
   <!-- End of Bootstrap container -->
   <script>
     src =
@@ -822,9 +1095,9 @@
   </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </body>
 
 </html>
