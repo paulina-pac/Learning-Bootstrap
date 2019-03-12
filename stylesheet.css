@@ -65,4 +65,5 @@ padding: 0 2px;
   text-align: center;
   margin: 10px;
   background: steelblue;
+  border-width: 3px !important;
 }
