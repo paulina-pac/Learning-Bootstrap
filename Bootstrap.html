@@ -33,7 +33,7 @@
 
 
 
-    <div class="container" role="grid">
+    <div class="container mb-5" role="grid">
         <section class="content" id="mission">
             <h1 class="display-4 bg-light" id="home">Learning Bootstrap</h1>
             <h2>Few things worth mentioning about bootsrap</h2>
@@ -1190,8 +1190,12 @@
             and we have to specify when you want them to go horizontal.
             That's what this class is for. Now, in addition to navbar and navbar-expand, we also need to specify a color for the navbar itself,
             and to do that we use just the basic bg-COLOR classes.</p>
-        <p>
-            <b>1. Create navbar</b>
+        <ol style="font-weight:700">
+            <li>Create nav tag with class "navbar"</li>
+            <li>Create div container (for your links) inside with class "navbar-nav"</li>
+            <li>Create all the menu items with a href tag and add "nav-item" and "nav-link" classes</li>
+            <li>You can optionally add "active" or "disabled" class</li>
+            
             <ul class="my-3">
                 <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">navbar</li>
                 <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">add navbar-nav</li>
@@ -1200,10 +1204,10 @@
                 <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">add: active</li>
                 <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">or: disabled</li>
             </ul>
-        </p>
+        </ol>
 
         <p>
-            <b>2. Navbar components</b>
+            <b>2. Add "navbar-expand-sm" class (shows a column menu in SM. and row above sm breakpoint)</b>
             <ul class="my-3">
                 <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">navbar-expand-breakpoint</li>
                 <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">sm</li>
@@ -1220,6 +1224,7 @@
             <ul class="my-3">
                 <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">bg-color</li>
                 <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">primary, success etc.</li>
+                <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">background-color:#any</li>
             </ul>
         </p>
 
@@ -1246,7 +1251,7 @@
             We can also add images, but will need CSS adjusting. And finally adding a piece of text to the navigation with the class of navbar-text.
         </p>
         <p>
-            <b>1. Create navbar-brand</b>
+            <b>1. Create div under nav with class "navbar-brand" or anchor tag if you want that to be a link with company logo</b>
             <ul class="my-3">
                 <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">navbar-brand</li>
                 <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">navbar-text</li>
@@ -1297,40 +1302,74 @@
                 Now, the id is going to allow you to link the aria attributes with the specific container.
             </p>
             <p>
-                <b>1. Create dropdown class to align to nav</b>
+                <b>1. Create div container with "dropdown" class</b>
                 <ul class="my-3">
                     <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown</li>
-                    <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-toggle (on link)</li>
-                    <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-toggle="dropdown"</li>
-                    <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-menu</li>
-                    <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-item</li>
-                    <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">id & aria attributes</li>
                 </ul>
             </p>
+            <p>
+                    <b>2. Add "dropdown-toggle" class to the link in the menu (it's the small icon)</b>
+                    <ul class="my-3">
+                        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-toggle</li>
+
+                    </ul>
+                </p>
+
+                <p>
+                        <b>3. Add "data-toggle" attribute to the link in the menu</b>
+                        <ul class="my-3">
+                            <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-toggle="dropdown"</li>
+                        </ul>
+                    </p>
+
+                    
+                <p>
+                        <b>4. Create another div container with class "dropdown-menu" around your link item in the menu</b>
+                        <ul class="my-3">
+                            <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-menu</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                            <b>5. Create children links for the link in the menu with a class "dropdown-item"</b>
+                            <ul class="my-3">
+                                <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-item</li>
+                            </ul>
+                        </p>
+
+                        <b>6. Don't forget to add few aria attributes in the menu link and in the dropdown-menu div</b>
+                        <ul class="my-3">
+
+                            <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">id & aria attributes</li>
+                        </ul>
+                    </p>
+
+            
+                    <hr>
 
             <nav class="navbar bg-danger navbar-dark navbar-expand-sm">
                 <div class="container">
                     <a href="#" class="navbar-brand d-none d-sm-inline-block">
-                        <img src="letterpress.svg" alt="logo" style="width: 40px; fill:white;"> </a>
+                        <img src="letterpress.svg" alt="logo" style="width: 40px;"> </a>
                     <div class="navbar-nav ml-sm-auto">
 
                         <a href="#" class="nav-item nav-link">Home</a>
 
-                        <div class="dropdown">
+                        <div class="dropdown"> <!-- !Container for DROPDOWN -->
 
                             <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown"
                                id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
 
                             <div class="dropdown-menu" aria-labelledby="servicesDropdown" role="menuitem">
-
+                                <!-- ?DROPDOWN CHOICES ITEMS -->
                                 <a href="#" class="dropdown-item">a</a>
                                 <a href="#" class="dropdown-item">b</a>
                                 <a href="#" class="dropdown-item">c</a>
-
-
-                            </div> <!-- END OF MENU DROPDOWN ITEMS -->
-
-                        </div> <!-- END OF DROPDOWN -->
+                            </div> <!-- ?END OF MENU DROPDOWN ITEMS -->
+                        
+                        
+                        
+                        </div> <!-- !END OF DROPDOWN -->
 
                         <a href="#" class="nav-item nav-link">insert</a>
                         <a href="#" class="nav-item nav-link">nav-item</a>
@@ -1341,13 +1380,268 @@
 
             </nav>
 
+            <hr />
+            <h2 class="display-4 bg-light text-center">
+                Form Classes
+            </h2>
+            <hr />
+            <p>  In order to add form elements to a menu, you simply need two classes. 
+                First you use a <b>form-inline</b> element on some type of container where you're going to place the form elements. 
+                And then if you just add <b>form-control</b> classes as needed for things like input fields. 
+                And some elements don't even need any extra classes, like buttons, but you may need to add 
+                some additional spacing classes as needed. </p>
+
+                <p>
+                        <b>1. Create a div container with a class "form-inline"</b>
+                        <ul class="my-3">
+                            <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">form-inline</li>
+                        </ul>
+                    </p>
+
+                    <b>2. Add "form-control" class in input</b>
+                    <ul class="my-3">
+
+                        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">form-control</li>
+                    </ul>
+                </p>
+
+<hr> <!-- !Check out this cool example of FORM CLASSES -->
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #5272c9">
+    <div class="container">
+        <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link">Number1</a>
+            <a href="#" class="nav-item nav-link">Number2</a>
+            <a href="#" class="nav-item nav-link">Number3</a>
+            <a href="#" class="nav-item nav-link">Number4</a>
+        </div>
+        <form class="form-inline">
+            <input class="form-control mr-2" type="text" placeholder="search">
+            <button class="btn btn-outline-light" type="submit">GO</button>
+        </form>
+    </div>
+</nav>
 
 
-            <hr>
-            <hr>
-            <div style="height:400px;"></div>
+<hr />
+<h2 class="display-4 bg-light text-center">
+    Positioning
+</h2>
+<hr />
+<p>
+        <b>Fixed-top (fixed-bottm) class, will take an element, position it on top/bottom of the existing content at the top of the screen, 
+            and it'll stick there to the top forever. </b>
+        <ul class="my-3">
+            <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">fixed-top</li>
+            <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">fixed-bottom</li>
+        </ul>
+    </p>
+
+    <b>Sticky-top, will make the menu stick to the top of the screen as we scroll the screen. </b>
+    <ul class="my-3">
+
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">sticky-top</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">*some spacing needed</li>
+    </ul>
+</p>
+
+
+
+<hr />
+<h2 class="display-4 bg-light text-center">
+    Collapsable Content
+</h2>
+<hr />
+<p>
+        <b> We need to create a div class (around anchored menu links) that collapses when the width of the device or the window is really small. 
+             </b>
+        <ul class="my-3">
+            <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">collapse</li>
+            <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">navbar-collapse</li>
+        </ul>
+    
+    </p>
+    <b> Give that div an ID (eg."myTogglerNav") </b>
+    <ul class="my-3">
+
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">id</li>
+    </ul>
+</p>
+
+</p>
+<b> Just under "container" div , create a button with class "navbar-toggler" with type ="button" data-toggle ="collapse" and 
+    data-target=#"id name", aria-contols="myTogglerNav" aria-expanded="false"
+    aria-laber="Toggle Navigation" </b>
+<ul class="my-3">
+
+    <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">id</li>
+    <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">button:</li>
+    <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">navbar-toggler</li>
+    <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">span class="navbar-toggler-icon"</li>
+</ul>
+</p>
+
+
+
+<hr>
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container">
+        <button class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#myTogglerNav" 
+                aria-controls="myTogglerNav" 
+                aria-expanded="false"
+                aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <a href="#" class="navbar-brand">Company logo</a>
+    
+    
+        <div class="collapse navbar-collapse" id="myTogglerNav">
+    
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link">Testing1</a>
+                <a href="#" class="nav-item nav-link">Testing2</a>
+                <a href="#" class="nav-item nav-link">Testing3</a>
+                <a href="#" class="nav-item nav-link">Testing4</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<hr />
+<h2 class="display-4 bg-light text-center">
+    BUTTONS
+</h2>
+<hr />
+<p>
+    <b> The basic class for creating any kind of button is the btn class, but normally used with additional classes</b>
+    <ul class="my-3">
+            <button class="btn d-inline-block p-2 mx-2 my-2 btn-primary">btn</button>
+            <button class="btn-sm d-inline-block p-2 mx-2 my-2 btn-primary">btn-sm</button>
+            <button class="btn btn-lg d-inline-block p-2 mx-2 my-2 btn-primary">btn-lg</button>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center"> &lt;a&gt; &lt;btn btn-sm&gt; &lt;input&gt;</li>
+    </ul>
+</p>
+
+<p>
+        <b> We can add colours: "btn-color" </b> </p>
+        <p>
+        <buttton class="btn btn btn-sm btn-primary d-inline-block p-2 mx-2 my-2 text-center">primary</buttton>
+        <buttton class="btn btn btn-sm btn-secondary d-inline-block p-2 mx-2 my-2 text-center">secondary</buttton>
+        <buttton class="btn btn btn-sm btn-success d-inline-block p-2 mx-2 my-2 text-center">success</buttton>
+        <buttton class="btn btn btn-sm btn-danger d-inline-block p-2 mx-2 my-2 text-center">danger</buttton>
+        <buttton class="btn btn btn-sm btn-warning d-inline-block p-2 mx-2 my-2 text-center">warning</buttton>
+        <buttton class="btn btn btn-sm btn-info d-inline-block p-2 mx-2 my-2 text-center">info</buttton>
+        <buttton class="btn btn btn-sm btn-light d-inline-block p-2 mx-2 my-2 text-center">light</buttton>
+        <buttton class="btn btn btn-sm btn-dark d-inline-block p-2 mx-2 my-2 text-center">dark</buttton>
+    </p>
+            
+
+    <p>
+            <b> and outlines "btn-outline-color" </b> </p>
+            <p>
+    <p>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-primary">primary</button>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-secondary">secondary</button>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-success">success</button>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-danger">danger</button>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-warning">warning</button>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-info">info</button>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-light">light</button>
+        <button class="btn btn-sm d-inline-block p-2 mx-2 my-2 btn-outline-dark">dark</button>
+    </p>
+
+    <p><b> button with class"btn-block" will block it's width to container </b> </p>
+    <p><button class="btn btn-block d-inline-block p-2 mx-2 my-2 btn-dark">btn-block</button>
+    </p>
+
+
+    <p><b> button can have "active" or "disabled" classes as well </b> </p>
+    <a href="#" class="btn btn-primary active">active link button</a>   
+    
+    <a href="#" class="btn btn-primary disabled">Disabled link button</a>
+    </p>
+
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+        Button Groups
+    </h2>
+    <hr />
+    <p>
+        <b> There are few classes that help create button groups "btn-group"</b>
+        <ul class="my-3">
+            <button class="btn d-inline-block p-2 mx-2 my-2 btn-primary">btn-group (lg or sm)</button>
+            <button class="btn d-inline-block p-2 mx-2 my-2 btn-primary">btn-group-vertical</button>
+            <button class="btn d-inline-block p-2 mx-2 my-2 btn-primary">btn-toolbar</button>
+        </ul>
+    </p>
+
+    <div class="btn-group-lg mb-2" aria-label="category" role="button">
+            <button class="btn btn-success" type="button">example</button>
+            <button class="btn btn-success" type="button">of btn-group</button>
+            <button class="btn btn-success" type="button">lg buttons</button>
 
     </div>
+
+    <div class="btn-toolbar-sm mb-2 mr-2">
+            <button class="btn btn-success" type="button">example of</button>
+            <button class="btn btn-success" type="button">btn-group</button>
+            <button class="btn btn-success" type="button">-vertical</button>
+
+    </div>
+
+        
+    <div class="btn-group-vertical">
+            <button class="btn btn-success" type="button">example of</button>
+            <button class="btn btn-success" type="button">btn-group</button>
+            <button class="btn btn-success" type="button">-vertical</button>
+
+    </div>
+
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+        Badges
+    </h2>
+    <hr />
+    <p>
+        <b> One of the new addition to Bootsrp4 is badges.</b>
+    <p><span class="badge badge-dark"> badge </span></p>
+    </p>
+    <p><span class="badge badge-pill badge-danger"> badge badge-dark</span></p>
+    </p>
+    <p><span class="badge badge-pill badge-warning">badge badge-pill badge-warning</span></p>
+    
+    <p class="badge badge-info">badge badge info</p>
+
+
+    <hr />
+    <h2 class="display-4 bg-light text-center">
+        Progress Bars
+    </h2>
+    <hr />
+    <p>
+        <b> One of the new addition to Bootsrp4 is badges.</b>
+    <p><span class="badge badge-dark"> badge </span></p>
+    </p>
+    <p><span class="badge badge-pill badge-danger"> badge badge-dark</span></p>
+    </p>
+    <p><span class="badge badge-pill badge-warning">badge badge-pill badge-warning</span></p>
+    
+    <p class="badge badge-info">badge badge info</p>
+
+
+
+
+</div>
     <!-- End of Bootstrap container -->
 
     <script
