@@ -67,3 +67,18 @@ padding: 0 2px;
   background: steelblue;
   border-width: 3px !important;
 }
+
+.coverek {
+  height: 50vh;
+  background-image: url("https://cdn-images-1.medium.com/max/1200/1*lduEjOI-EQltoRbmKSICeA.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.coverek img {
+  width:100%;
+  min-height: 50vh;
+}

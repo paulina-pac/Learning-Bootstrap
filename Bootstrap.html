@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="stylesheet.css" />
 
     <title>Learning Bootstrap</title>
+    
 </head>
 
 <body>
@@ -21,21 +22,111 @@
     <nav class="navbar bg-light bg-light navbar-light navbar-expand-sm justify-content-center sticky-top">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#home">Home</a>
-            <a class="nav-item nav-link" href="#styles">Basic styles</a>
-            <a class="nav-item nav-link" href="#layout">Layout</a>
-            <a class="nav-item nav-link" href="#navigation">Navigation</a>
-            <a class="nav-item nav-link" href="#">Style Element</a>
-            <a class="nav-item nav-link" href="#">Layout components</a>
-            <a class="nav-item nav-link" href="#">Forms</a>
-            <a class="nav-item nav-link" href="#">Interactive</a>
+    
+<div class="d-flex">
+                <a class="nav-item nav-link pr-0" href="#mission">Basic Styles</a>
+                <div class="dropdown">
+                    <a class="nav-item nav-link dropdown-toggle px-1" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false"
+                       href="#"></a>
+                       
+                    <div class="dropdown-menu aria-labelledby="servicesDropdown" role="menuitem">
+                        <a href="#mission" class="dropdown-item">Typography styles</a>
+                        <a href="#styles" class="dropdown-item">Blockquotes & Lists</a>
+                        <a href="#colors" class="dropdown-item">Colors</a>
+                        <a href="#images" class="dropdown-item">Images</a>
+                        <a href="#variables" class="dropdown-item">Variables</a>
+                    </div>
+                </div>
+</div>
+    
+
+<div class="d-flex">
+        <a class="nav-item nav-link pr-0" href="#layout">Layout</a>
+    <div class="dropdown">
+        <a class="nav-item nav-link dropdown-toggle px-1" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false"
+           href="#"></a>
+        <div class="dropdown-menu aria-labelledby=" servicesDropdown" role="menuitem">
+                <a href="#layout" class="dropdown-item">Containers</a>
+                <a href="#columns" class="dropdown-item">Rows&Columns</a>
+                <a href="#offset" class="dropdown-item">Offset Columns</a>
+                <a href="#nesting" class="dropdown-item">Nesting</a>
+                <a href="#alignment" class="dropdown-item">Alignment</a>
+                <a href="#displayp" class="dropdown-item">Display Properties</a>
+                <a href="#flexbox" class="dropdown-item">Flexbox</a>
+                <a href="#marpad" class="dropdown-item">Margin & Padding</a>
+                <a href="#visibility" class="dropdown-item">Visibility</a>
+                <a href="#sizing" class="dropdown-item">Sizing</a>
+                <a href="#borders" class="dropdown-item">Borders</a>
+        </div>
+    </div>
+</div>
+
+
+    
+<div class="d-flex">
+        <a class="nav-item nav-link pr-0" href="#navigation">Navigation</a>
+        <div class="dropdown">
+            <a class="nav-item nav-link dropdown-toggle px-1" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false"
+               href="#"></a>
+               
+            <div class="dropdown-menu aria-labelledby="servicesDropdown" role="menuitem">
+                <a href="#navbars" class="dropdown-item">Nav Bars</a>
+                <a href="#navlogo" class="dropdown-item">Nav Logo</a>
+                <a href="#navdropdown" class="dropdown-item">Nav Dropdowns</a>
+                <a href="#formclasses" class="dropdown-item">Form Classes</a>
+                <a href="#navpos" class="dropdown-item">Nav Positioning</a>
+                <a href="#collapsable" class="dropdown-item">Collapsable content</a>
+            </div>
+        </div>
+</div>
+
+
+<div class="d-flex">
+        <a class="nav-item nav-link pr-0" href="#buttons">Style Elements</a>
+        <div class="dropdown">
+            <a class="nav-item nav-link dropdown-toggle px-1" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false"
+               href="#"></a>
+               
+            <div class="dropdown-menu aria-labelledby="servicesDropdown" role="menuitem">
+                <a href="#buttons" class="dropdown-item">Buttons</a>
+                <a href="#buttongrps" class="dropdown-item">Button groups</a>
+                <a href="#badges" class="dropdown-item">Badges</a>
+                <a href="#progressbar" class="dropdown-item">Progress Bar</a>
+                <a href="#listgrps" class="dropdown-item">List Groups</a>
+                <a href="#breadcrumps" class="dropdown-item">Breadcrumps</a>
+            </div>
+        </div>
+</div>
+    
+            <div class="dropdown">
+                <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">Layout components</a>
+                <div class="dropdown-menu" aria-labelledby="servicesDropdown" role="menuitem">
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">Forms</a>
+                <div class="dropdown-menu" aria-labelledby="servicesDropdown" role="menuitem">
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">Interactive</a>
+                <div class="dropdown-menu" aria-labelledby="servicesDropdown" role="menuitem">
+                </div>
+            </div>
+    
         </div>
     </nav>
 
+    <header class="coverek" id="home">
+
+    </header>
 
 
     <div class="container mb-5" role="grid">
         <section class="content" id="mission">
-            <h1 class="display-4 bg-light" id="home">Learning Bootstrap</h1>
+            <h1 class="display-4 bg-light">Learning Bootstrap</h1>
             <h2>Few things worth mentioning about bootsrap</h2>
             <ul>
                 <li>
@@ -166,7 +257,7 @@
         </blockquote>
 
         <hr />
-        <h2 class="display-4 bg-light">Bootstrap Colours</h2>
+        <h2 class="display-4 bg-light" id="colors">Bootstrap Colours</h2>
         <hr />
 
         <p>
@@ -201,7 +292,7 @@
         </ul>
 
         <hr />
-        <h2 class="display-4 bg-light">Bootstrap Images</h2>
+        <h2 class="display-4 bg-light" id="images">Bootstrap Images</h2>
         <hr />
         <p>
             In Bootstrap, we have <b>img-fluid</b> class, so that will make the
@@ -238,7 +329,7 @@
         </figure>
 
         <hr />
-        <h2 class="display-4 bg-light">CSS VARIABLES</h2>
+        <h2 class="display-4 bg-light" id="variables">CSS VARIABLES</h2>
         <hr />
         <p>
             In Bootstrap, we can use CSS VARIABLES <b>var() and :root</b> class,
@@ -318,7 +409,7 @@
 
         <section>
             <hr />
-            <h2 class="display-4 bg-light">Containers & Rows</h2>
+            <h2 class="display-4 bg-light" id="rows">Containers & Rows</h2>
             <hr />
             <h2>The Grid fun facts</h2>
             <ul>
@@ -368,7 +459,7 @@
 
         <section class="container text-center" id="services">
             <hr />
-            <h2 class="display-4 bg-light">Rows & Columns / col-BP-COL</h2>
+            <h2 class="display-4 bg-light" id="columns">Rows & Columns / col-BP-COL</h2>
             <hr />
 
             <section class="text-left">
@@ -494,7 +585,7 @@
 
         <section>
             <hr />
-            <h2 class="display-4 bg-light text-center">
+            <h2 class="display-4 bg-light text-center" id="offset">
                 OFFSET columns / offset-bp-col
             </h2>
             <hr />
@@ -533,7 +624,7 @@
 
         <section>
             <hr />
-            <h2 class="display-4 bg-light text-center">
+            <h2 class="display-4 bg-light text-center" id="nesting">
                 Nesting / adding div class="row" inside column
             </h2>
             <hr />
@@ -671,7 +762,7 @@
 
         <section>
             <hr />
-            <h2 class="display-4 bg-light text-center">
+            <h2 class="display-4 bg-light text-center" id="alignment">
                 Grid alignment options
             </h2>
             <hr />
@@ -765,7 +856,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="displayp">
             Bootstrap Display Properties
         </h2>
         <hr />
@@ -848,7 +939,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="flexbox">
             Flexbox container options
         </h2>
         <hr />
@@ -906,7 +997,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="marpad">
             Margin & Padding / PRO(SID)-(BP)-SIZ
         </h2>
         <hr />
@@ -974,7 +1065,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="visibility">
             Bootstrap visibility
         </h2>
         <hr />
@@ -1003,7 +1094,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="sizing">
             Sizing |SIZ(-AMT)
         </h2>
         <hr />
@@ -1044,7 +1135,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="borders">
             Borders | border-sid-color-0
         </h2>
         <hr />
@@ -1179,7 +1270,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="navbars">
             Nav Bars
         </h2>
         <hr />
@@ -1239,7 +1330,7 @@
 
 
         <hr />
-        <h2 class="display-4 bg-light text-center">
+        <h2 class="display-4 bg-light text-center" id="navlogo">
             Nav branding & text
         </h2>
         <hr />
@@ -1284,7 +1375,7 @@
 
 
             <hr />
-            <h2 class="display-4 bg-light text-center">
+            <h2 class="display-4 bg-light text-center" id="navdropdown">
                 Nav Dropdowns
             </h2>
             <hr />
@@ -1333,14 +1424,14 @@
                     <p>
                             <b>5. Create children links for the link in the menu with a class "dropdown-item"</b>
                             <ul class="my-3">
-                                <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-item</li>
+                                <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">&lt;a href="#" class="dropdown-item"&gt;text</li>
                             </ul>
                         </p>
 
                         <b>6. Don't forget to add few aria attributes in the menu link and in the dropdown-menu div</b>
                         <ul class="my-3">
 
-                            <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">id & aria attributes</li>
+                            <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#"</li>
                         </ul>
                     </p>
 
@@ -1381,7 +1472,7 @@
             </nav>
 
             <hr />
-            <h2 class="display-4 bg-light text-center">
+            <h2 class="display-4 bg-light text-center" id="formclasses">
                 Form Classes
             </h2>
             <hr />
@@ -1424,7 +1515,7 @@
 
 
 <hr />
-<h2 class="display-4 bg-light text-center">
+<h2 class="display-4 bg-light text-center" id="navpos">
     Positioning
 </h2>
 <hr />
@@ -1448,7 +1539,7 @@
 
 
 <hr />
-<h2 class="display-4 bg-light text-center">
+<h2 class="display-4 bg-light text-center" id="collapsable">
     Collapsable Content
 </h2>
 <hr />
@@ -1514,7 +1605,7 @@
 
 
 <hr />
-<h2 class="display-4 bg-light text-center">
+<h2 class="display-4 bg-light text-center" id="buttons">
     BUTTONS
 </h2>
 <hr />
@@ -1570,7 +1661,7 @@
 
 
     <hr />
-    <h2 class="display-4 bg-light text-center">
+    <h2 class="display-4 bg-light text-center" id="buttongrps">
         Button Groups
     </h2>
     <hr />
@@ -1608,7 +1699,7 @@
 
 
     <hr />
-    <h2 class="display-4 bg-light text-center">
+    <h2 class="display-4 bg-light text-center" id="badges">
         Badges
     </h2>
     <hr />
@@ -1624,19 +1715,144 @@
 
 
     <hr />
-    <h2 class="display-4 bg-light text-center">
+    <h2 class="display-4 bg-light text-center" id="progressbar">
         Progress Bars
     </h2>
     <hr />
     <p>
-        <b> One of the new addition to Bootsrp4 is badges.</b>
-    <p><span class="badge badge-dark"> badge </span></p>
+        <b> To create a progress bar we need set of classes:.</b>
+    <p><span class="badge badge-dark p-2"> div with "progress" class </span></p>
     </p>
-    <p><span class="badge badge-pill badge-danger"> badge badge-dark</span></p>
-    </p>
-    <p><span class="badge badge-pill badge-warning">badge badge-pill badge-warning</span></p>
+    <p><span class="badge badge-pill badge-info p-2"> div with "progress-bar" item</span></p>
+    <p><span class="badge badge-pill badge-warning p-2">width, height *styles (on div-progress)</span></p>
     
-    <p class="badge badge-info">badge badge info</p>
+    <p class="badge badge-warning p-2">label text between progress elements</p>
+
+    <p class="badge badge-warning p-2">bg-color or progress-bar-striped</p>
+
+    <p class="badge badge-warning p-2">progress-bar-animated</p>
+
+    <p class="badge badge-danger p-2">aria role="progressbar" aria-valuenow aria-valuemin aria-valuemax </p>
+
+<p> let's see the example below:</p>
+<div class="progress">
+<div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width:40%;" role="progressbar" aria-value-now="40%" aria-value-min="0 aria-value-max="100%""> div"progress-bar"(blue) inside div "progress" (grey)</div>
+</div>
+
+
+
+<hr />
+    <h2 class="display-4 bg-light text-center" id="listgrps">
+        List Groups
+    </h2>
+    <hr />
+    <p> List groups are a great way to style lists, and other elements like buttons and links. </p>
+    <b>1. Create a div or ul container with "list-group" class</b>
+    <ul class="my-3">
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">list-group</li>
+    </ul>
+</p>
+<p>
+        <b>2. create "list-group-item" class (in list items, buttons or anchor tag) inside the list-grup container</b>
+        <ul class="my-3">
+            <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">list-group-item</li>
+
+        </ul>
+    </p>
+
+    <p>
+            <b>You can add styles:</b>
+            <ul class="my-3">
+                <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">active</li>
+                <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">disabled</li>
+                <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">list-group-item-action (hover effect)</li>
+            </ul>
+        </p>
+
+        
+    <p>
+            <b>add coloours</b>
+            <ul class="my-3">
+                <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">list-grup-item-COLOR</li>
+            </ul>
+        </p>
+
+        <p>
+                <b>You can add badge classes</b>
+                <ul class="my-3">
+                    <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">badge class / flexbox class</li>
+                </ul>
+            </p>
+
+            <div class="container">
+                <div class="row">
+                    <section class="col-12">
+
+<section class="content">
+    <h3> Header</h3>
+    <p>Basic text</p>
+
+    <ul class="list-group mb-3">
+<li class="list-group-item active">list-group-item active</li>
+<li class="list-group-item disabled">list-group-item disabled</li>
+<li class="list-group-item list-group-item-action">list-group-item list-group-item-action</li>
+<li class="list-group-item"><span class="badge badge-primary badge-pill p-2">list-group-item badge badge-primary badge-pill</span></li>
+<li class="list-group-item">List 5</li>
+    </ul>
+
+
+    <div class="list-group mb-3">
+<a href="#" class="list-group-item active">list-group-item active</a>
+<a href="#" class="list-group-item disabled">list-group-item disabled</a>
+<a href="#" class="list-group-item-success">list-group-item-success</a>
+<a href="#" class="list-group-item-warning">list-group-item-warning</a>
+<a href="#" class="list-group-item-danger">list-group-item-danger</a>
+    </div>
+
+    <div class="list-group mb-3">
+            <button class="list-group-item-dark" type="button">list-group-item-dark button</button>
+            <button class="list-group-item-info" type="button">list-group-item-info button</button>
+            <button class="list-group-item-primary" type="button">list-group-item-primary</button>
+            <button class="list-group-item-secondary" type="button">list-group-item-secondary</button>
+            <button class="list-group-item-danger" type="button">list-group-item-danger</button>
+                </div>
+
+</section>
+                    </section>
+                </div>
+            </div>
+
+      
+
+            hr />
+            <h2 class="display-4 bg-light text-center" id="breadcrumps">
+                Breadcrumps
+            </h2>
+            <hr />
+            <p> Breadcrumbs are sometimes used to indicate where you are in the navigation structure of your site or for secondary navigation. </p>
+            
+            <b>1. Create a div with "breadcrump" class</b>
+            <ul class="my-3">
+                <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">breadcrump</li>
+            </ul>
+        </p>
+
+        <b>2. Inside breadcrump, create "breadcrump-item"</b>
+        <ul class="my-3">
+            <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">breadcrump-item</li>
+        </ul>
+    </p>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
