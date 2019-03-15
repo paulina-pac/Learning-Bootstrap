@@ -97,12 +97,24 @@
             </div>
         </div>
 </div>
-    
-            <div class="dropdown">
-                <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">Layout components</a>
-                <div class="dropdown-menu" aria-labelledby="servicesDropdown" role="menuitem">
-                </div>
-            </div>
+
+
+<div class="d-flex">
+    <a class="nav-item nav-link pr-0" href="#jumbotron">Layout Components</a>
+    <div class="dropdown">
+        <a class="nav-item nav-link dropdown-toggle px-1" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false"
+           href="#"></a>
+           
+        <div class="dropdown-menu aria-labelledby="servicesDropdown" role="menuitem">
+            <a href="#jumbotron" class="dropdown-item">Jumbotron</a>
+            <a href="#tablestyles" class="dropdown-item">Table Styles</a>
+            <a href="#bcardlayouts" class="dropdown-item">Basic Card Layouts</a>
+            <a href="#cardcontentclasses" class="dropdown-item">Card Content Classes</a>
+            <a href="#cardlayouts" class="dropdown-item">Card Layouts</a>
+            <a href="#mediaobj" class="dropdown-item">Media Object</a>
+        </div>
+    </div>
+</div>
     
             <div class="dropdown">
                 <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">Forms</a>
@@ -123,10 +135,14 @@
 
     </header>
 
+    <header class="jumbotron">
+        <div class ="display-2 mb-4 text-center"> Learning Bootstrap 4</div>
+    </header>
+
 
     <div class="container mb-5" role="grid">
         <section class="content" id="mission">
-            <h1 class="display-4 bg-light">Learning Bootstrap</h1>
+            <h1 class="display-4 bg-light">Bootstrap fun facts</h1>
             <h2>Few things worth mentioning about bootsrap</h2>
             <ul>
                 <li>
@@ -1824,37 +1840,434 @@
 
       
 
-            hr />
+            <hr />
             <h2 class="display-4 bg-light text-center" id="breadcrumps">
                 Breadcrumps
             </h2>
             <hr />
             <p> Breadcrumbs are sometimes used to indicate where you are in the navigation structure of your site or for secondary navigation. </p>
             
-            <b>1. Create a div with "breadcrump" class</b>
+            <b>1. Create a div with "breadcrumb" class</b>
             <ul class="my-3">
-                <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">breadcrump</li>
+                <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">breadcrumb</li>
             </ul>
         </p>
 
-        <b>2. Inside breadcrump, create "breadcrump-item"</b>
+        <b>2. Inside breadcrump, create "breadcrumb-item"</b>
         <ul class="my-3">
-            <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">breadcrump-item</li>
+            <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">breadcrumb-item</li>
+        </ul>
+    </p>
+
+
+    <p>
+        <b>You can add styles:</b>
+        <ul class="my-3">
+            <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">active</li>
+            <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">used in lists / navs / anchor tags</li>
+        </ul>
+    </p>
+
+    
+    <p>
+        <b>You can change for example "/" within the breadcrumbs in CSS for something else</b>
+        <ul class="my-3">
+            <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">.breadcrumb-item+.breadcrumb-item::before {
+                content: '|'
+              }</li>
         </ul>
     </p>
 
 
 
 
+    <div class="container">
+        <div class="row">
+            <section class="col-12">
+<h3> Just an example of breadcrumbs within OL / li / a tags </h3>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item active"> <a href="#"> Breadcrump 1</a></li>
+    <li class="breadcrumb-item"> <a href="#"> Breadcrump 2</a></li>
+    <li class="breadcrumb-item"> <a href="#"> Breadcrump 3</a></li>
+</ol>
+
+<h3> Just an example of breadcrumbs within nav/ anchor tags </h3>
+<nav class="breadcrumb">
+    <li class="breadcrumb-item"> <a href="#"> Breadcrump 1</a></li>
+    <li class="breadcrumb-item"> <a href="#"> Breadcrump 2</a></li>
+    <li class="breadcrumb-item active"> <a href="#"> Breadcrump 3</a></li>
+</nav>
+</section>
+</div>
+</div>
+
+
+<hr />
+<h2 class="display-4 bg-light text-center" id="jumbotron">
+    Layout Components — Jumbotron
+</h2>
+<hr />
+
+<p> The jumbotron is a component for a highlighted section of content and it's commonly used at the top of many websites(header) </p>
+
+<b>1. Create a div with "jumbotron" class</b>
+<ul class="my-3">
+    <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">jumbotron</li>
+</ul>
+<p> <b>2. add "jumbotron-fluid" items and use styles as needed</b>
+    <ul class="my-3">
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">jumbotron jumbotron-fluid</li>
+    </ul>
+</p>
 
 
 
 
+<hr />
+<h2 class="display-4 bg-light text-center" id="tablestyles">
+    Table Styles
+</h2>
+<hr />
+
+<p> In Bootstrap you can control the look and feel of tables, and there's a couple of main classes that we can use to do this</p>
+<b>1. Create a div with "table" class</b>
+<ul class="my-3">
+    <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table</li>
+</ul>
+<p> <b>2. add "table-bordered" and "table-hover" items and use styles as needed</b>
+    <ul class="my-3">
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-bordered  /  table-hover</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-striped</li>
+    </ul>
+</p>
+
+<p> <b>3. you can add "thead-light thead-dark" classes to change it's style and below classes for colours</b>
+    <ul class="my-3">
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">thead-light  /  thead-dark</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-color TRs & TDs (lighter colours)</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">bg-color (rich colours)</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">text-color (inside the table))</li>
+    </ul>
+</p>
+<p> <b>4. Tables can be responisive, they just need a class "table-responsive-Breakpoint"</b>
+    <ul class="my-3">
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">table-responsive-sm or (table-sm) this will get rid of padding</li>
+    </ul>
+</p>
+
+
+<table class="table bg-light text-black thead-dark table-responsive-lg table-bordered table-striped table-hover">
+    <thead class="bg-secondary text-white">
+        <tr>
+            <th scope="col">Item #</th>
+            <th scope="col">Product or Service</th>
+            <th scope="col">Price (ea.)</th>
+            <th scope="col">Retail Price (Case)</th>
+            <th scope="col">Case Discount</th>
+            <th scope="col">Wholesale Price</th>
+            <th scope="col">Wholesale Discount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">100050</th>
+            <td>Advance Pet Oral Care Toothbrush and Toothpaste</td>
+            <td>$9.55 </td>
+            <td>$108.87</td>
+            <td>$5.73</td>
+            <td>$103.14</td>
+            <td>$11.46</td>
+        </tr>
+        <tr>
+            <th scope="row">100043</th>
+            <td>Basic Teeth Cleaning and Exam</td>
+            <td>$100.00 </td>
+            <td>$1,140.00</td>
+            <td>$60.00</td>
+            <td>$1,080.00</td>
+            <td>$120.00</td>
+        </tr>
+        <tr>
+            <th scope="row">100013</th>
+            <td>Calm Cat Anxiety Relief Spray</td>
+            <td>$9.49 </td>
+            <td>$108.19</td>
+            <td>$5.69</td>
+            <td>$102.49</td>
+            <td>$11.39</td>
+        </tr>
+        <tr>
+            <th scope="row">100041</th>
+            <td>Cat Hairball Remedy Gel</td>
+            <td>$6.00 </td>
+            <td>$68.40</td>
+            <td>$3.60</td>
+            <td>$64.80</td>
+            <td>$7.20</td>
+        </tr>
+        <tr>
+            <th scope="row">100051</th>
+            <td>Cat Vaccination Package</td>
+            <td>$55.00 </td>
+            <td>$627.00</td>
+            <td>$33.00</td>
+            <td>$594.00</td>
+            <td>$66.00</td>
+        </tr>
+        <tr>
+            <th scope="row">100046</th>
+            <td>Dog Vaccination Package</td>
+            <td>$65.00 </td>
+            <td>$741.00</td>
+            <td>$39.00</td>
+            <td>$702.00</td>
+            <td>$78.00</td>
+        </tr>
+        <tr>
+            <th scope="row">100044</th>
+            <td>Healthy Coat Dog Supplement</td>
+            <td>$6.44 </td>
+            <td>$73.42</td>
+            <td>$3.86</td>
+            <td>$69.55</td>
+            <td>$7.73</td>
+        </tr>
+</tbody>
+</table>
+
+
+
+<hr />
+<h2 class="display-4 bg-light text-center" id="bcardlayouts">
+    Basic Card Layouts
+</h2>
+<hr />
+
+
+<p> Cards can help you lay out your content into card-like containers that look great and have a small outline around them. </p>
+<b>1. Create a div with "card" class</b>
+<ul class="my-3">
+    <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card</li>
+</ul>
+<p> <b>2. Inside the card containers add another one with "card-body"</b>
+    <ul class="my-3">
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-body</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-header</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-footer</li>
+    </ul>
+</p>
+
+<p> <b>3. Inside the card-body containers there's a lot of clases:</b>
+    <ul class="my-3">
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-text</li>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-title</li>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-subtitle</li>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-link</li>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-img</li>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-img-top / card-img-bottom</li>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-img-overlay</li>
+    </ul>
+</p>
+
+<p> <b>4. As always with "bg-color" class, we can colour it with standard bstrap ones:</b>
+    <ul class="my-3">
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">bg-color</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">border-color</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">text-color</li>
+
+    </ul>
+</p>
+
+<p> <b>4. There are few group container classes for lists:</b>
+    <ul class="my-3">
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">list-group</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">list-group-item</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">list-group-flush</li>
+
+    </ul>
+</p>
 
 
 
 
+<hr />
+<h2 class="display-4 bg-light text-center" id="cardcontentclasses">
+    Card Content Classes
+</h2>
+<hr />
 
+<div class="container">
+
+    <section class="card mb-5" id="drwinthrop">
+        <div class="card-header">
+            <h2 class="card-title">Dr. Stanley Winthrop</h2>
+            <h5 class="card-subtitle">Behaviorist</h5>
+        </div>
+            <div class="card-body">
+                <img class="card-img img-fluid" src="http://www.facetheforce.today/random/400?r=1" alt="Doctor Winthrop Photo">
+                <p class="card-text"> Dr. Winthrop is the guardian of Missy, a three-year old Llaso mix, who he adopted at the shelter. Dr. Winthrop is passionate about spay and
+                    neuter and pet adoption, and works tireless hours outside the clinic, performing free spay and neuter surgeries for the shelter.</p>
+                </div>
+               <div class="card-footer">
+                    <a class="card-link" href="#">About Me</a>
+                    <a class="card-link" href="#">My Pets</a>
+                    <a class="card-link" href="#">Client Slideshow</a>
+               </div>
+    </section>
+  
+    <section class="card mb-5" id="drchase">
+        <img class="card-img-top img-fluid" src="http://www.facetheforce.today/random/400?r=2" alt="Doctor Chase Photo">
+      <div class="card-body">
+            <h2 class="card-title">Dr. Elizabeth Chase</h2c>
+            <h5 class="card-subtitle">Dentistry</h5>
+            <p class="card-text">Dr. Chase spends much of her free time helping the local bunny rescue organization find homes for bunnies, such as Kibbles - a Dalmatian bunny who is part of the large Chase household, including two dogs, three cats, and a turtle.</p>
+        </div>
+    <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item">About Me</a>
+                    <a href="#" class="list-group-item">My Pets</a>
+                    <a href="#" class="list-group-item">Client Slideshow</a>
+    </div>
+    </section>
+  
+    <section class="card mb-5" id="drsanders">
+        <img class="img-fluid" src="http://www.facetheforce.today/random/400?r=3" alt="Doctor Sanders Photo">
+     <div class="card-body">
+            <h2 class="card-title">Dr. Kenneth Sanders</h2>
+            <h5 class="card-subtitle">Nutritionist</h5>
+            <p class="card-text">Leroy walked into Dr. Sanders front door when she was moving into a new house. After searching for weeks for Leroy's guardians, she decided to make Leroy a part of her pet family, and now has three cats.</p>
+            <a href="#">About Me</a>
+            <a href="#">My Pets</a>
+            <a href="#">Client Slideshow</a>
+     </div>
+    </section>
+  
+
+  
+  </div>
+
+
+
+
+<hr />
+<h2 class="display-4 bg-light text-center" id="cardlayouts">
+    Card Layouts
+</h2>
+<hr />
+
+
+<p> <b>Controlling the layout of different card containers is easy with these classes:</b>
+    <ul class="my-3">
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-group</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-deck</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">card-columns</li>
+    </ul>
+</p>
+
+
+<div class="container">
+    <div class="card-group">
+
+
+            <section class="card mb-auto" id="drgardner">
+                    <img class="img-fluid" src="http://www.facetheforce.today/random/400?r=4" alt="Doctor Gardner Photo">
+                      <div class="card-body">
+                          <h2>Dr. Michael Gardner</h2>
+                          <h5>Practitioner</h5>
+                          <p>When Dr. Gardner was 8 his family moved to Colorado, where he spent most of his free time playing on his neighbors farm. He came to love spending time with the horses, chickens, and goats. He still considers all of his family's farm animals his own, but Frank, his Cattle dog is his nearest and dearest friend.</p>
+                      </div>
+                       <div class="card-footer">
+                                    <a href="#">About Me</a>
+                                    <a href="#">My Pets</a>
+                                    <a href="#">Client Slideshow</a>
+                       </div>
+                  </section>
+                
+                  <section class="card mb-5" id="drruiz">
+                    <img class="img-fluid" src="http://www.facetheforce.today/random/400?r=5" alt="Doctor Ruiz Photo">
+                 <div class="card-body">
+                          <h2>Dr. Brook Ruiz</h2>
+                          <h5>Radiology</h5>
+                          <p>Dr. Brook has spent countless hours helping the local animal shelter with injured animals ,that find their way into their doors. She recently adopted a new feline friend, Trish, that she helped rescue from a flooded area. Trish loves playing with her new sister, Else.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#">About Me</a>
+                            <a href="#">My Pets</a>
+                            <a href="#">Client Slideshow</a>
+                        </div>
+                  </section>
+                
+                  <section class="card mb-5" id="drwong">
+                    <img class="img-fluid" src="http://www.facetheforce.today/random/400?r=6" alt="Doctor Wong Photo">
+                <div class="card-body">
+                          <h2>Dr. Olivia Wong</h2>
+                          <h5>Preventive Care</h5>
+                          <p>Dr. Wong is a cancer survivor who was fortunate enough to get to spend time with a therapy dog during her recovery. She became passionate about therapy animals, and has started her own foundation to train and provide education to patients in recovery. Now she gets her own dose of daily therapy from her husky, Lilla.</p>
+                        </div>
+                             <div class="card-footer">
+                                  <a href="#">About Me</a>
+                                  <a href="#">My Pets</a>
+                                  <a href="#">Client Slideshow</a>
+                             </div>
+                  </section>
+    </div>
+</div>
+
+
+
+<hr />
+<h2 class="display-4 bg-light text-center" id="mediaobj">
+    Media Object
+</h2>
+<hr />
+
+
+<p> <b>It's really common to have layouts where you have images and text side-by-side and you need the images to be in a separate 
+    column than the rest of the content. For this task, Bootstrap gives you a couple of media classes:</b>
+    <ul class="my-3">
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">media</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">media-body</li>
+        <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">flexbox to control</li>
+    </ul>
+</p>
+
+<div class="container">
+
+    <section class="media mb-5" id="drwinthrop">
+        <img class="img-fluid mr-4" src="https://placeimg.com/640/480/people?r=1" alt="Doctor Winthrop Photo">
+        <div class="media-body">
+            <h2>Dr. Stanley Winthrop</h2>
+            <h5>Behaviorist</h5>
+            <p>Dr. Winthrop is the guardian of Missy, a three-year old Llaso mix, who he adopted at the shelter. Dr. Winthrop is passionate about spay and neuter and pet adoption,
+                and works tireless hours outside the clinic, performing free spay and neuter surgeries for the shelter.</p>
+    
+            </div>
+        </section>
+
+    <section class="media mb-5" id="drchase">
+        <img class="img-fluid mr-4" src="https://placeimg.com/640/480/people?r=2" alt="Doctor Chase Photo">
+
+        <div class="media-body">
+            <h2>Dr. Elizabeth Chase</h2>
+            <h5>Dentistry</h5>
+            <p>Dr. Chase spends much of her free time helping the local bunny rescue organization find homes for bunnies, such as Kibbles - a Dalmatian bunny who is part of the
+                large Chase household, including two dogs, three cats, and a turtle.</p>
+        </div>
+
+    </section>
+
+    <section class="media mb-5" id="drsanders">
+        <img class="img-fluid mr-4" src="https://placeimg.com/640/480/people?r=3" alt="Doctor Sanders Photo">
+<div class="media-body">
+            <h2>Dr. Kenneth Sanders</h2>
+            <h5>Nutritionist</h5>
+            <p>Leroy walked into Dr. Sanders front door when she was moving into a new house. After searching for weeks for Leroy's guardians, she decided to make Leroy a part of
+                her pet family, and now has three cats.</p>
+            <a href="#">About Me</a>
+            <a href="#">My Pets</a>
+            <a href="#">Client Slideshow</a>
+</div>
+    </section>
+</div>
 
 
 </div>
