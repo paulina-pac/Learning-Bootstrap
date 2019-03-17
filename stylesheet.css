@@ -9,6 +9,10 @@ img.img-fluid {
   box-shadow: var(--foo);
 }
 
+img.img-fluid {
+  max-width: 1600px;
+}
+
 .loguszek {
   width: 100px;
 }
@@ -84,6 +88,7 @@ padding: 0 2px;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
+
   content: '|'
 }
 

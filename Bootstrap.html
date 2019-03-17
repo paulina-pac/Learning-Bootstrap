@@ -17,8 +17,8 @@
     
 </head>
 
-<body>
-<nav class="navbar bg-light bg-light navbar-light navbar-expand-sm justify-content-center sticky-top">
+<body data-spy="scroll" data-target="#navbar-site" data-offset="80">
+<nav id="navbar-site" class="navbar bg-light bg-light navbar-light navbar-expand-sm justify-content-center sticky-top">
     <div class="navbar-nav">
         <a class="nav-item nav-link active" href="#home">Home</a>
 
@@ -171,8 +171,8 @@
     </header>
 
 
-    <div class="container mb-5" role="grid">
-        <section class="content" id="mission">
+    <div class="container mb-5" role="grid" id="mission" style="margin-top: 70px;">
+        <section class="content">
             <h1 class="display-4 bg-light">Bootstrap fun facts</h1>
             <h2>Few things worth mentioning about bootsrap</h2>
             <ul>
@@ -2609,22 +2609,65 @@
 <p> <b> Input groups, allows you to create form elements within a horizontal layout that have a little bit 
     of a better-integrated look</b> </p>
     <ul class="my-3">
-        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group</li>
     </ul>
 <p> <b>We can add items at the beginning or at the end of the input groups, at the beginning, we would add 
     a class to that element of "input-group-prepend" and at the end, "input-group-append". </b> </p>
     <ul class="my-3">
-        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group-prepend</li>
-        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group-append</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group-prepend</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group-append</li>
     </ul>
 
     <p> <b> In addition to that, any element that you want to place in there, like a button or a checkbox or just some text, 
         add the class of "input-group-text"</b> </p>
             <ul class="my-3">
-                <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group-text</li>
-                <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">aria-label sr-only</li>
+                <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">input-group-text</li>
+                <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">aria-label sr-only</li>
             </ul>
         
+<hr>
+
+
+<div class="container mt-4">
+
+    <h2>Help Another Pet</h2>
+
+    <form>
+
+        <fieldset class="form-group">
+            <legend>Your Info</legend>
+
+            <div class="form-group">
+                <label class="form-control-label" for="name">Name</label>
+                <input class="form-control" type="text" id="name" placeholder="Your Name">
+            </div><!-- form-group -->
+
+            <div class="form-group">
+                <label class="form-control-label" for="owneremail">Email</label>
+                <input class="form-control" type="text" id="owneremail" placeholder="Address">
+            </div><!-- form-group -->
+
+            <div class="form-group">
+                <label class="form-control-label" for="donationamt">Donation Amount</label>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text text-white bg-primary">$</div>
+                    </div>
+                    <input type="text" class="form-control" id="donationamt" placeholder="Amount">
+                </div>
+            </div><!-- form-group -->
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+
+        </fieldset><!-- fieldset -->
+    </form>
+
+
+
+</div><!-- content container -->
+
+
 
 
 <hr />
@@ -2633,17 +2676,144 @@
 </h2>
 <hr />
 
+
+
+<p> <b> Tooltips are a great way to show some simple additional information on links and buttons. 
+    Now you should only use tooltips on HTML elements that are focusable like links and foreign controls because 
+    of problems with usability</b> </p>
+        <ul class="my-3">
+            <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-toggle="tooltip"</li>
+        </ul>
+    <p> <b> In order to set these up, you add a data-toggle of tooltip to an element and then add a title
+        attribute with some text in it. That text can optionally have some HTML and you use it inside a title tag. </b> </p>
+        <ul class="my-3">
+            <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">title-text</li>
+            
+        </ul>
+    
+        <p> <b>  Tooltips are configured in one of two ways, you can use a data attribute or JavaScript. Data is a lot easier</b> </p>
+                <ul class="my-3">
+                    <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data</li>
+                    <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">use JavaScript for activation</li>
+                    <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">$(function) () { $('[data-toggle="tooltip"]').tooltip({OPTIONS})})</li>
+                </ul>
+           <p>"&lt;div class="tooltip bs-tooltip-top" role="tooltip"&gt;</p> 
+           <p>"&lt;div class="arrow"&gt; &lt;/div&gt;</p>
+           <p>"&lt;div class="tooltip-inner"&gt; </p>
+           <p>Tooltip text</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+    <hr>
+
+    <p> <b>  Common options that can be used in the tooltip are:</b> </p>
+    <ul class="my-3">
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">placement (top right bottom left)</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">trigger (click / focus / hover)</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">html (true/false)</li>
+    </ul>
+
+
+    <div class="container mt-4 bg-info text-white">
+
+            <section class="content" id="mission">
+              <h2>Our Commitment to you</h2>
+              <hr>
+              <p>Wisdom Pet Medicine strives to blend the best in traditional and alternative <a href="#" data-toggle="tooltip" data-placement="top" title="exams,ultrasounds &more"> medicine </a> in the diagnosis and treatment of companion animals including dogs, cats, birds, reptiles, rodents, and fish. We apply the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest treatments and&nbsp;cures.</p>
+              <p>We strive to be your pet's medical staff experts from youth through the senior years. We build preventative health care plans for each and every one of our patients, based on breed, age, and sex, so that your pet receives the most appropriate care at crucial milestones. We want to give your pet a long and healthy&nbsp;life.</p>
+            </section>
+            
+            </div><!-- content container -->
+
+
 <hr />
 <h2 class="display-4 bg-light text-center" id="popovers">
     Display popovers
 </h2>
 <hr />
 
+
+<p> <b>  Popovers let you display another content, and are very similar to :</b> </p>
+<ul class="my-3">
+    <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-toggle="popover"</li>
+    <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-title="text"</li>
+    <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-content="content"</li>
+    <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">$(function) () { $('[data-toggle="popover"]').popover({OPTIONS})})</li>
+</ul>
+
+<p> <b>  Common options that can be used in the popover are:</b> </p>
+<ul class="my-3">
+    <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">placement (top right bottom left)</li>
+    <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">trigger (click / focus / hover)</li>
+    <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">container</li>
+</ul>
+
+
+
+
+<div class="container mt-4 bg-secondary p-2 text-white">
+
+    <h2>Our Commitment to you</h2>
+    <hr>
+    <p>Wisdom Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis and treatment of companion animals including dogs, cats, birds, reptiles, rodents, and fish. We apply the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest treatments and&nbsp;cures.</p>
+    <p>We strive to be your pet's medical staff experts from youth through the senior years. We build preventative health care plans for each and every one of our patients, based on breed, age, and sex, so that your pet receives the most appropriate care at crucial milestones. We want to give your pet a long and healthy&nbsp;life.</p>
+  
+    <button type="button" class="btn btn-light" data-toggle="popover" title="Standard Checkups" data-content="This is some old fashioned long content that I want to write in here">
+      Checkup Info
+    </button>
+  
+  </div><!-- content container -->
+
+
 <hr />
 <h2 class="display-4 bg-light text-center" id="alerts">
     Alerts
 </h2>
 <hr />
+
+
+<p> <b>  Alerts are messages with special contextual styles that are designed to display in great looking boxes. 
+    They're optionally dismissed and can have any sort of markup:</b> </p>
+<ul class="my-3">
+    <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">alert</li>
+    <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">alert-color</li>
+    <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">alert-heading</li>
+    <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">alert-link</li>
+    <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">alert-dismissible fade show</li>
+</ul>
+
+<p> <b> Dont' forget to add a close button:</b> </p>
+    <ul class="my-3">
+        
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">button type="button" class="close" data-dismiss="alert" aria-label="close"</li>
+        <li class="bg-warning text-white rounded d-inline-block p-2 mx-2 my-2 text-center">span aria-hidden="true"&gt; &times; /span
+    </ul>
+    
+    
+<div class="container mt-4">
+
+        <h2 class="alert-heading">Our Commitment to you</h2>
+        <p>Wisdom Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis
+             and treatment of companion animals including dogs, cats, birds, reptiles, rodents, and fish.
+              We apply the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest treatments and&nbsp;cures.</p>
+      
+        <div class="alert alert-info alert-dismissable fade show">
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hideen="true">&times;</span>
+            </button>
+          <h4>Standard Checkups</h4>
+          <p>Our standard checkups offer ultrasounds, x-rays and dental cleanings.</p>
+          <a class="alert-link" href="#">More Info</a>
+        </div>
+      
+        <p>We strive to be your pet's medical staff experts from youth through the senior years. 
+            We build preventative health care plans for each and every one of our patients, based on breed, 
+            age, and sex, so that your pet receives the most appropriate care at crucial milestones. 
+            We want to give your pet a long and healthy&nbsp;life.</p>
+      
+      </div><!-- content container -->
+
+
+
 
 <hr />
 <h2 class="display-4 bg-light text-center" id="ddropdowns">
@@ -2652,11 +2822,192 @@
 <hr />
 
 
+<p> <b> Dropdowns are a common design patterns in Bootstrap. You can create them easily for different components in navs, tabs etc.</b> </p>
+    <ul class="my-3">
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-toggle</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-menu</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-item</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-header</li>
+        <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-divider</li>
+    </ul>
+
+    <p> <b> Dropdowns options:</b> </p>
+    <ul class="my-3">
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">btn-sm / btn-lg</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropup</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-menu-right</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-item</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">btn-group</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-toggle-split</li>
+    </ul>
+
+
+
+    <div class="container mt-4">
+    
+        <h2>Our Commitment to you</h2>
+        <p>Wisdom Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis and treatment of companion animals including dogs, cats, birds,
+            reptiles, rodents, and fish. We apply the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest treatments and&nbsp;cures.</p>
+    
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownme"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">Drop-down</button>
+    
+            <div class="dropdown-menu" aria-labelledby="dropdownme">
+                <a class="dropdown-item" href="#">Grooming</a>
+                <a class="dropdown-item" href="#">General Health</a>
+                <a class="dropdown-item" href="#">Nutrition</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Pest Control</a>
+                <a class="dropdown-item" href="#">Vaccinations</a>
+            </div>
+        </div>
+
+
+        <div class="dropup my-2">
+                <button class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownme"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">Drop-up</button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownme">
+                    <a class="dropdown-item" href="#">Grooming</a>
+                    <a class="dropdown-item" href="#">General Health</a>
+                    <a class="dropdown-item" href="#">Nutrition</a>
+                    <a class="dropdown-item" href="#">Pest Control</a>
+                    <a class="dropdown-item" href="#">Vaccinations</a>
+                </div>
+            </div>
+
+
+            
+        <div class="btn-group mb-3">
+            <button type="button" class="btn btn-secondary">split</button>
+                <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                        type="button"
+                        id="dropdownme"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"></button>
+        
+
+                <div class="dropdown-menu" aria-labelledby="dropdownme">
+                    <a class="dropdown-item" href="#">Grooming</a>
+                    <a class="dropdown-item" href="#">General Health</a>
+                    <a class="dropdown-item" href="#">Nutrition</a>
+                    <a class="dropdown-item" href="#">Pest Control</a>
+                    <a class="dropdown-item" href="#">Vaccinations</a>
+                </div>
+            </div>
+    
+        <p>We strive to be your pet's medical staff experts from youth through the senior years. We build preventative health care plans for each and every one of our patients,
+            based on breed, age, and sex, so that your pet receives the most appropriate care at crucial milestones. We want to give your pet a long and healthy&nbsp;life.</p>
+    
+    </div><!-- content container -->
+
 <hr />
 <h2 class="display-4 bg-light text-center" id="caccordions">
     Collapse Accordions
 </h2>
 <hr />
+
+
+<p> <b> Collapse and accordions are a set of related components that allow you to show or hide HTML content. 
+    Collapse is the simplest, and lets you show or hide content on a click. Accordions are similar but part of a bigger group. 
+    When one item shows, another hides, so accordions are essentially group of collapses.  </b> </p>
+    <p> Create a link or Button with class:</p>
+    <ul class="my-3">
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-toggle="collapse"</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">#id or data-target</li>
+        <li class="bg-success text-white rounded d-inline-block p-2 mx-2 my-2 text-center">"collapse" class</li>
+
+    </ul>
+
+        <ul class="my-3">
+            <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">requires container</li>
+            <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">"show" class once</li>
+            <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">"collapse" class</li>
+            <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">dropdown-menu</li>
+            <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">use card style</li>
+        </ul>
+    
+
+        <div class="container bg-light">
+            <div class="row">
+                <section class="col-12">
+        
+                    <h2>Services</h2>
+        
+    
+                    <button class="btn btn-success mb-4" data-toggle="collapse" data-target="#pestcontrol" aria-expanded="link to Pest control">Pest Control</button>
+                    <div id="pestcontrol" class="collapse mb-4">
+                        We offer the latest advances in safe and effective prevention and treatment of fleas, ticks, worms, heart worm, and other parasites.
+                    </div>
+
+
+        
+<div id="servicesaccordion" role="tablist" aria-multiselectable="true">
+        
+    
+
+    <div class="card">
+        <div class="card-header" role="tab" id="groomingheading">
+            <h5 class="mb-0"><a data-toggle="collapse" data-parent="#servicesaccordion" aria-expanded="true" aria-controls="grooming" href="#grooming">Grooming</a></h5>
+        </div><!-- card header -->
+    
+        <div id="grooming" class="collapse show" role="tabpanel" aria-labelledby="groomingheading">
+            <div class="card-block">
+                <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
+            </div>
+        </div><!-- collapse -->
+    </div><!-- card -->
+    
+    
+    
+    
+    <div class="card">
+        <div class="card-header" id="generalhealthheading">
+            <h5 class="mb-0"><a data-toggle="collapse" data-parents="#servicesaccordion" aria-expanded="true" aria-controls="generalhealth" href="#generalhealth">General Health</a></h5>
+        </div><!-- card header -->
+    
+        <div id="generalhealth" class="collapse" role="tabpanel" aria-labelledby="generalhealthheading">
+            <div class="card-block">
+                <p>Wellness and senior exams, ultrasound, x-ray, and dental cleanings are just a few of our general health services.</p>
+            </div>
+        </div><!-- card collapse -->
+    </div><!-- card -->
+    
+
+    
+    <div class="card">
+        <div class="card-header" role="tab" id="nutritionheading">
+            <h5 class="mb-0"><a data-toggle="collapse" data-parent="#servicesaccordion" aria-expanded="true" aria-controls="nutrition" href="#nutrition">Nutrition</a></h5>
+        </div><!-- card header -->
+    
+        <div id="nutrition" class="collapse" role="tabpanel" aria-labelledby="nutritionheading">
+            <div class="card-block">
+                <p>Let our nutrition experts review your pet's diet and prescribe a custom nutrition plan for optimum health and disease prevention.</p>
+            </div>
+        </div><!-- collapse -->
+    
+
+    </div><!-- card -->
+    </div>
+<!-- end of services accordio -->
+        
+                </section>
+            </div><!-- row -->
+        </div><!-- content container -->
+
+
+
 
 <hr />
 <h2 class="display-4 bg-light text-center" id="modals">
@@ -2664,11 +3015,166 @@
 </h2>
 <hr />
 
+<p> <b> Modals allow you to show and hide content that is in an element showing up as an overlay on top of your page.
+        Like with other components, modals have two parts: the trigger, which can be a button or a link,
+        as well as a piece of content that you want to show in the modal. If you use a link, you'll need to target an ID that you want
+        to use as your modal. If you're using a button, then you use the data-target attribute:</p> </b>
+<ul class="my-3">
+    <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">#id / data-target"</li>
+    <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-toggle="modal"</li>
+    <li class="bg-primary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">modal</li>
+
+</ul>
+
+
+<p> <b> There are some other classes for structure like spacing and main content or header:</p> </b>
+<ul class="my-3">
+    <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">modal-dialog</li>
+    <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">modal-content</li>
+    <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">modal-header</li>
+    <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">modal-body</li>
+    <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">modal-footer</li>
+    <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">modal-title</li>
+    <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-dismiss="modal"</li>
+
+</ul>
+
+<hr>
+<div class="container">
+    <div class="row">
+        <section class="col-12">
+
+            <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#servicesmodal">More Info</button>
+
+            <div class="modal fade" id="servicesmodal">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="modal-header">
+                                <div class="modal-title">
+                                    <h5>Pest Control</h5>
+                                </div>
+                            </div>
+                            <p>We offer the latest advances in safe and effective prevention and treatment of fleas, ticks, worms,
+                                heart worm, and other parasites..</p>
+                            </div->
+                        </div>
+                    </div> <!-- End of MODAL-DIALOG -->
+                </div> <!-- End of MODAL FADE -->
+        </section>
+    </div><!-- row -->
+</div><!-- content container -->
+
+
+
+
 <hr />
 <h2 class="display-4 bg-light text-center" id="carousels">
     Carousels
 </h2>
 <hr />
+
+
+
+<p> <b> Carousels are the most popular Bootstrap component. It essentially allows you to create a slideshow that auto-advances 
+    and it gives you some controls to let you advance through the images:</p> </b>
+<ul class="my-3">
+    <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel</li>
+    <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-ride="carousel"</li>
+    <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-inner</li>
+    <li class="bg-danger text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-item</li>
+
+</ul>
+
+<p> <b> Carousels options:</p> </b>
+    <ul class="my-3">
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">one element: active</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">photos needs to be cropped&sized</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-caption</li>
+    </ul>
+
+    <p> <b> Carousels nav options:</p> </b>
+    <ul class="my-3">
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-target</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-control-prev</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-control-prev-icon</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-control-next</li>
+        <li class="bg-secondary text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-control-next-icon</li>
+    </ul>
+
+
+    
+    <p> <b> Carousels indicators:</p> </b>
+    <ul class="my-3">
+
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">carousel-indicators</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-target</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-slide-to</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data- (JS)</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">interval: 5000</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">pause: hover / null</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">ride: false/ true</li>
+        <li class="bg-info text-white rounded d-inline-block p-2 mx-2 my-2 text-center">wrap: true</li>
+    </ul>
+
+
+<div class="container">
+    <div class="row">
+        <section class="col-12">
+
+            <div class="content container">
+                <div class="row">
+                    <section class="col-sm-12">
+
+                        <div class="carousel slide" id="featured" data-ride="carousel">
+
+                            <div class="carousel-inner">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#featured" data-slide-to="0" class="active"></li>
+                                    <li data-target="#featured" data-slide-to="1"></li>
+                                    <li data-target="#featured" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-item active">
+                                    <img class="img-fluid car" src="https://source.unsplash.com/1600x900/?nature" alt="Lifestyle Photo">
+                                </div>
+
+                                <div class="carousel-item car">
+                                    <img class="img-fluid" src="https://source.unsplash.com/1600x900/?dancer" alt="Mission">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3>Pete, <small>owner of McAllister</small></h3>
+                                        <p>"Wisdom Pet Medicine is the only clinic around that will even book pet fish for appointments."</p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item"><img class="img-fluid car" src="https://source.unsplash.com/1600x900/?mountain" alt="Vaccinations">
+                                </div>
+                           
+                            </div> <!-- carousel-inner -->
+                        </div>  <!-- END OF CAROUSEL -->
+
+                        <a href="#featured" class="carousel-control-prev" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true">
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </a>
+
+                        <a href="#featured" class="carousel-control-next" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true">
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </a>
+
+                   <hr>
+
+                    </section>
+                </div><!-- row -->
+            </div><!-- content container -->
+
+        </section>
+    </div><!-- row -->
+</div><!-- content container -->
+
 
 <hr />
 <h2 class="display-4 bg-light text-center" id="scrollspy">
@@ -2676,7 +3182,15 @@
 </h2>
 <hr />
 
-
+<p> <b>  Scrollspy is a really cool component that allows you to keep track of the scroll of the page and modifies
+     classes according to the position of your elements. :</p> </b>
+    <ul class="my-3">
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-spy="scroll"</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">position: relative</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-target="id"</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">fixed-top</li>
+        <li class="bg-dark text-white rounded d-inline-block p-2 mx-2 my-2 text-center">data-offset</li>
+    
 
 
 
@@ -2689,6 +3203,8 @@
 
 </div>
     <!-- End of Bootstrap container -->
+
+
 
     <script
 
@@ -2707,6 +3223,48 @@
             src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
+            <script>
+                $(function() {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+
+            </script>
+
+            <script>
+            $(function () {
+
+$('[data-toggle="popover"]').popover({
+    trigger: "hover",
+    placement:"top",
+    
+});
+});
+            </script>
+
+            <script>
+            $(function() {
+  var topoffset = 70; //variable for menu height
+
+  //Use smooth scrolling when clicking on navigation
+  $('.navbar-nav a').click(function() {
+    if (location.pathname.replace(/^\//,'') === 
+      this.pathname.replace(/^\//,'') && 
+      location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top-topoffset
+        }, 500);
+        return false;
+      } //target.length
+    } //click function
+  }); //smooth scrolling
+
+});
+
+</script>
 </body>
 
 </html>
